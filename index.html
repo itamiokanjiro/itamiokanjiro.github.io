@@ -360,7 +360,7 @@
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2025-05-30</span>
-        <span><span class="icon-pencil"></span>19 字</span>
+        <span><span class="icon-pencil"></span>59 字</span>
         <span><span class="icon-clock"></span>1 分鐘</span>
       </div>
       <h2 class="post-title">git基礎</h2>
@@ -369,7 +369,17 @@
           git clone 下載目標檔案
 git clone https://github.com/D-Sketon/hexo-theme-reimu.git
 
+查看歷史
+git log 
+git log --perl-regexp --author=&amp;#39;^(?!picoCTF &amp;lt;ops@picoctf\.com&amp;gt;).*$&amp;#39;
 
+切換到 
+git switch --detach b562f0b425907789d11d2fe2793e67592dc6be93
+git switch master
+git switch feature/part-1
+
+顯示分支
+git branch
         
       </article>
     </div>
@@ -745,7 +755,7 @@ function encrypt(message, secretKey) &amp;#123;
     
       <div>
         <span class="icon-brush"></span>
-        3.7k
+        3.8k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
         00:23
