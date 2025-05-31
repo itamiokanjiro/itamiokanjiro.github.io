@@ -43,7 +43,7 @@
 <meta property="og:description" content="git clone 下載目標檔案 git clone https:&#x2F;&#x2F;github.com&#x2F;D-Sketon&#x2F;hexo-theme-reimu.git  查看歷史 git log  git log --perl-regexp --author&#x3D;&#39;^(?!picoCTF &lt;ops@picoctf\.com&gt;).*$&#39;  切換到  git switch --detach b">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-05-30T13:40:55.000Z">
-<meta property="article:modified_time" content="2025-05-31T13:04:04.569Z">
+<meta property="article:modified_time" content="2025-05-31T13:17:44.498Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta name="twitter:card" content="summary">
   
@@ -240,7 +240,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">12</div>
+    <div class="sidebar-state-number">13</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -361,16 +361,12 @@ git remote set-url origin git@github.com:itamiokanjiro/itamiokanjiro.github.io.g
 <p>產生金鑰</p>
 <pre><code>ssh-keygen -t rsa -b 4096 -C &quot;a234123234a@gmail.com&quot;
 cat ~/.ssh/id_rsa.pub
-
-Host github-itami
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_rsa
-    IdentitiesOnly yes
-rm -rf ~/.ssh
-git remote -v
-git remote set-url origin git@github.com:itamiokanjiro/test.github.io.git
-rm -rf build &amp;&amp; npm run build &amp;&amp; npm run deploy
+</code></pre>
+<p>設定作者</p>
+<pre><code>git config user.name &quot;你的 GitHub 使用者名稱&quot;
+</code></pre>
+<p>設定信箱</p>
+<pre><code>git config user.email &quot;你的 GitHub 郵箱&quot;
 </code></pre>
 
       
@@ -467,10 +463,10 @@ rm -rf build &amp;&amp; npm run build &amp;&amp; npm run deploy
     
       <div>
         <span class="icon-brush"></span>
-        4k
+        4.2k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:24
+        00:25
       </div>
     
     
@@ -516,7 +512,7 @@ rm -rf build &amp;&amp; npm run build &amp;&amp; npm run deploy
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">12</div>
+    <div class="sidebar-state-number">13</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -666,7 +662,7 @@ rm -rf build &amp;&amp; npm run build &amp;&amp; npm run deploy
           description: "",
           stripContent: "git clone 下載目標檔案 git clone https://github.com/D-Sketon/hexo-theme-reimu.git  查看歷史 git log  git log --perl-regexp --author=&amp;#39;^(?!picoCTF &amp;lt;ops@picoctf\.com&amp;gt;).*$&amp;#39;  切換到  git switch --detach b562f0b425907789d11d2fe2793e67592dc6be93 git switch",
           date: "Fri May 30 2025 21:40:55 GMT+0800",
-          updated: "Sat May 31 2025 21:04:04 GMT+0800",
+          updated: "Sat May 31 2025 21:17:44 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>
