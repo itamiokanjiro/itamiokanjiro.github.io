@@ -35,15 +35,15 @@
 
   
   
-    <meta name="description" content="tmux attach -t 進入目標 名為hexo tmux attach -t hexo  tmux new -s創建一個會話 名為hexo tmux new -s hexo  tmux kill-session -t 刪除名為hexo的會話 tmux kill-session -t hexo  進出 ctrl+b 再按d  這三小 curl -fsSL https:&#x2F;&#x2F;deb.nodesou">
+    <meta name="description" content="tmux attach -t 進入目標 名為hexo tmux attach -t hexo  tmux new -s創建一個會話 名為hexo tmux new -s hexo  tmux kill-session -t 刪除名為hexo的會話 tmux kill-session -t hexo  進出 ctrl+b 再按d  切換到編號1的視窗 tmux select-window -t he">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tmux基礎">
 <meta property="og:url" content="https://itamiokanjiro.ddns.net:3111/2025/05/30/tmux%E5%9F%BA%E7%A4%8E/index.html">
 <meta property="og:site_name" content="學習日誌">
-<meta property="og:description" content="tmux attach -t 進入目標 名為hexo tmux attach -t hexo  tmux new -s創建一個會話 名為hexo tmux new -s hexo  tmux kill-session -t 刪除名為hexo的會話 tmux kill-session -t hexo  進出 ctrl+b 再按d  這三小 curl -fsSL https:&#x2F;&#x2F;deb.nodesou">
+<meta property="og:description" content="tmux attach -t 進入目標 名為hexo tmux attach -t hexo  tmux new -s創建一個會話 名為hexo tmux new -s hexo  tmux kill-session -t 刪除名為hexo的會話 tmux kill-session -t hexo  進出 ctrl+b 再按d  切換到編號1的視窗 tmux select-window -t he">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-05-30T13:34:34.000Z">
-<meta property="article:modified_time" content="2025-05-31T12:32:30.053Z">
+<meta property="article:modified_time" content="2025-06-01T11:57:05.031Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta property="article:tag" content="tmux">
 <meta property="article:tag" content="terminal">
@@ -243,7 +243,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">13</div>
+    <div class="sidebar-state-number">15</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -328,7 +328,7 @@
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-05-30T13:34:34.000Z" itemprop="datePublished">2025-05-30</time>
-    <time style="display: none;" id="post-update-time">2025-05-31</time>
+    <time style="display: none;" id="post-update-time">2025-06-01</time>
   </span>
 </div>
 
@@ -353,17 +353,11 @@
 <p>進出</p>
 <pre><code>ctrl+b 再按d
 </code></pre>
-<p>這三小</p>
-<pre><code>curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
-apt-get install -y nodejs
-node -v
-v12.22.9
-nvm install 18
-nvm use 18
-node -v
-npm run build &amp; npm run deploy
-gh auth logout
-mkdir -p ~/.ssh
+<p>切換到編號1的視窗</p>
+<pre><code>tmux select-window -t hexo:1  
+</code></pre>
+<p>刪除編號1的視窗</p>
+<pre><code>tmux kill-window -t hexo:1
 </code></pre>
 
       
@@ -462,10 +456,10 @@ mkdir -p ~/.ssh
     
       <div>
         <span class="icon-brush"></span>
-        4.2k
+        8k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:25
+        00:48
       </div>
     
     
@@ -511,7 +505,7 @@ mkdir -p ~/.ssh
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">13</div>
+    <div class="sidebar-state-number">15</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -659,9 +653,9 @@ mkdir -p ~/.ssh
           url: "https://itamiokanjiro.ddns.net:3111/2025/05/30/tmux%E5%9F%BA%E7%A4%8E/",
           excerpt: "",
           description: "",
-          stripContent: "tmux attach -t 進入目標 名為hexo tmux attach -t hexo  tmux new -s創建一個會話 名為hexo tmux new -s hexo  tmux kill-session -t 刪除名為hexo的會話 tmux kill-session -t hexo  進出 ctrl+b 再按d  這三小 curl -fsSL https://deb.nodesource.com/setup_18.x | bash - apt-get install -y nod",
+          stripContent: "tmux attach -t 進入目標 名為hexo tmux attach -t hexo  tmux new -s創建一個會話 名為hexo tmux new -s hexo  tmux kill-session -t 刪除名為hexo的會話 tmux kill-session -t hexo  進出 ctrl+b 再按d  切換到編號1的視窗 tmux select-window -t hexo:1    刪除編號1的視窗 tmux kill-window -t hexo:1  ",
           date: "Fri May 30 2025 21:34:34 GMT+0800",
-          updated: "Sat May 31 2025 20:32:30 GMT+0800",
+          updated: "Sun Jun 01 2025 19:57:05 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>
