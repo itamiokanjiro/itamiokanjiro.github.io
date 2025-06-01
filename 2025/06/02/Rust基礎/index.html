@@ -17,7 +17,7 @@
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://itamiokanjiro.ddns.net:3111';</script>
   
   <title>
-    YARA規則基礎 |
+    Rust基礎 |
     
     學習日誌
   </title>
@@ -35,15 +35,15 @@
 
   
   
-    <meta name="description" content="rule AdvancedMaliciousUPXExecutable &#123;     meta:         description &#x3D; &quot;pico&quot;      strings:         $upx1 &#x3D; &quot;UPX0&quot; ascii         $upx2 &#x3D; &quot;UPX1&quot; ascii         $upx3 &#x3D;">
+    <meta name="description" content="Rust 官方的開發流程是透過 cargo（等於 Rust 的專案管理工具 + 套件管理 + 編譯工具）來管理所有事情，所以不推薦直接透過RUST 編譯執行  建議使用cargo 檢測全局版本 rustc --version cargo --version  RUST 使用hello world fn main() &#123;     println!(&quot;Hello, Rust!&amp;qu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="YARA規則基礎">
-<meta property="og:url" content="https://itamiokanjiro.ddns.net:3111/2025/05/30/YARA%E8%A6%8F%E5%89%87%E5%9F%BA%E7%A4%8E/index.html">
+<meta property="og:title" content="Rust基礎">
+<meta property="og:url" content="https://itamiokanjiro.ddns.net:3111/2025/06/02/Rust%E5%9F%BA%E7%A4%8E/index.html">
 <meta property="og:site_name" content="學習日誌">
-<meta property="og:description" content="rule AdvancedMaliciousUPXExecutable &#123;     meta:         description &#x3D; &quot;pico&quot;      strings:         $upx1 &#x3D; &quot;UPX0&quot; ascii         $upx2 &#x3D; &quot;UPX1&quot; ascii         $upx3 &#x3D;">
+<meta property="og:description" content="Rust 官方的開發流程是透過 cargo（等於 Rust 的專案管理工具 + 套件管理 + 編譯工具）來管理所有事情，所以不推薦直接透過RUST 編譯執行  建議使用cargo 檢測全局版本 rustc --version cargo --version  RUST 使用hello world fn main() &#123;     println!(&quot;Hello, Rust!&amp;qu">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2025-05-30T14:08:04.000Z">
-<meta property="article:modified_time" content="2025-05-30T14:11:06.381Z">
+<meta property="article:published_time" content="2025-06-01T16:52:31.000Z">
+<meta property="article:modified_time" content="2025-06-01T17:09:40.444Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta name="twitter:card" content="summary">
   
@@ -189,7 +189,7 @@
           
         </picture>
         
-          <img  fetchpriority="high" src="/images/600211.webp" alt="YARA規則基礎">
+          <img  fetchpriority="high" src="/images/600211.webp" alt="Rust基礎">
         
       
     
@@ -200,7 +200,7 @@
         
         
           <a href="/" id="logo">
-            <h1 data-aos="slide-up">YARA規則基礎</h1>
+            <h1 data-aos="slide-up">Rust基礎</h1>
           </a>
         
       
@@ -319,13 +319,13 @@
   
 </aside>
 
-          <section id="main"><article id="post-YARA規則基礎" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="post-Rust基礎" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
-    <time datetime="2025-05-30T14:08:04.000Z" itemprop="datePublished">2025-05-30</time>
-    <time style="display: none;" id="post-update-time">2025-05-30</time>
+    <time datetime="2025-06-01T16:52:31.000Z" itemprop="datePublished">2025-06-02</time>
+    <time style="display: none;" id="post-update-time">2025-06-02</time>
   </span>
 </div>
 
@@ -338,73 +338,24 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <pre><code>rule AdvancedMaliciousUPXExecutable &#123;
-    meta:
-        description = &quot;pico&quot;
-
-    strings:
-        $upx1 = &quot;UPX0&quot; ascii
-        $upx2 = &quot;UPX1&quot; ascii
-        $upx3 = &quot;UPX!&quot; ascii
-
-
-        $mal_str1 = &quot;Cr/p0&quot; ascii wide
-        $mal_str2 = &quot;3&#39;+8U&quot; ascii wide
-        $mal_str3 = &quot;CHjM5&quot; ascii wide
-        $mal_str4 = &quot;t%j@&quot; ascii wide
-        $mal_str5 = &quot;l@Y2&quot; ascii wide
-        $mal_str6 = &quot;b3`5d5l5&quot; ascii wide
-        $mal_str7 = &quot;NtQueryInformationProcess&quot; ascii wide
-        // $mal_str8 = &quot;CreateProcessA&quot; ascii wide
-        // $mal_str9 = &quot;TerminateProcess&quot; ascii wide
-        $mal_str10 = &quot;DebugActiveProcess&quot; ascii wide
-        
-        //針對API
-        $api_critical1 = &quot;CreateToolhelp32Snapshot&quot; ascii
-        $api_critical2 = &quot;Process32FirstW&quot; ascii
-        $api_critical3 = &quot;Process32NextW&quot; ascii
-        $api_critical4 = &quot;VirtualAllocEx&quot; ascii
-        $api_critical5 = &quot;WriteProcessMemory&quot; ascii
-        $api_critical6 = &quot;SetThreadContext&quot; ascii
-        $api_critical7 = &quot;ResumeThread&quot; ascii
-
-        //針對16進制
-        $hex1 = &#123; 25 64 64 64 6C 21 30 &#125; // %dddl!0
-        $hex2 = &#123; 62 33 60 35 64 35 6C 35 &#125; // b3`5d5l5
-        $hex3 = &#123; 6E 74 51 75 65 72 79 49 6E 66 6F 72 6D 61 74 69 6F 6E 50 72 6F 63 65 73 73 &#125; // NtQueryInformationProcess
-        
-        // 針對特定名稱
-        $sect1 = &quot;.text&quot; ascii
-        $sect2 = &quot;.rdata&quot; ascii
-        $sect3 = &quot;.data&quot; ascii
-        $sect4 = &quot;.rsrc&quot; ascii
-        $sect5 = &quot;.reloc&quot; ascii
-        $sect6 = &quot;.upx&quot; ascii
-
-    condition:
-        uint16(0) == 0x5A4D and  // MZ 頭
-        filesize &lt; 100MB and  // 檔案小於100MB
-        (
-
-            (
-                (all of ($api_critical*)) and 
-                (1 of ($sect*))
-            ) or
-
-            (
-                (1 of ($upx*) and 1 of ($mal_str*))
-            ) or
-
-
-            (
-                2 of ($mal_str*)
-            ) or
-
-            (
-                1 of ($hex*)
-            )
-        )
+        <p>Rust 官方的開發流程是透過 cargo（等於 Rust 的專案管理工具 + 套件管理 + 編譯工具）來管理所有事情，<br>所以不推薦直接透過RUST 編譯執行  建議使用cargo</p>
+<p>檢測全局版本</p>
+<pre><code>rustc --version
+cargo --version
+</code></pre>
+<p>RUST 使用hello world</p>
+<pre><code>fn main() &#123;
+    println!(&quot;Hello, Rust!&quot;);
 &#125;
+</code></pre>
+<p>RUST 編譯執行</p>
+<pre><code>rustc main.rs
+./main
+</code></pre>
+<p>cargo 建立專案</p>
+<pre><code>cargo new hello_rust
+cd hello_rust
+cargo run
 </code></pre>
 
       
@@ -430,14 +381,14 @@
         
           
           
-            <img data-src="/images/600211.webp" data-sizes="auto" alt="gh基礎" class="lazyload">
+            <img data-src="/images/600211.webp" data-sizes="auto" alt="GO基礎" class="lazyload">
           
         
-        <a href="/2025/05/31/gh%E5%9F%BA%E7%A4%8E/"></a>
+        <a href="/2025/06/02/GO%E5%9F%BA%E7%A4%8E/"></a>
         <div class="article-nav-caption">Newer</div>
         <h3 class="article-nav-title">
           
-            gh基礎
+            GO基礎
           
         </h3>
       </div>
@@ -448,14 +399,14 @@
       
         
         
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="git基礎" class="lazyload">
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="未來滲透思路" class="lazyload">
         
       
-      <a href="/2025/05/30/git%E5%9F%BA%E7%A4%8E/"></a>
+      <a href="/2025/06/01/%E6%9C%AA%E4%BE%86%E6%BB%B2%E9%80%8F%E6%80%9D%E8%B7%AF/"></a>
       <div class="article-nav-caption">Older</div>
       <h3 class="article-nav-title">
         
-          git基礎
+          未來滲透思路
         
       </h3>
     </div>
@@ -694,13 +645,13 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "一袋米要扛幾樓",
-          title: "YARA規則基礎",
-          url: "https://itamiokanjiro.ddns.net:3111/2025/05/30/YARA%E8%A6%8F%E5%89%87%E5%9F%BA%E7%A4%8E/",
+          title: "Rust基礎",
+          url: "https://itamiokanjiro.ddns.net:3111/2025/06/02/Rust%E5%9F%BA%E7%A4%8E/",
           excerpt: "",
           description: "",
-          stripContent: "rule AdvancedMaliciousUPXExecutable &amp;#123;     meta:         description = &amp;quot;pico&amp;quot;      strings:         $upx1 = &amp;quot;UPX0&amp;quot; ascii         $upx2 = &amp;quot;UPX1&amp;quot; ascii         $upx3 = &amp;quot;UPX!&amp;quot; ascii           $mal_str1 = &amp;quot",
-          date: "Fri May 30 2025 22:08:04 GMT+0800",
-          updated: "Fri May 30 2025 22:11:06 GMT+0800",
+          stripContent: "Rust 官方的開發流程是透過 cargo（等於 Rust 的專案管理工具 + 套件管理 + 編譯工具）來管理所有事情，所以不推薦直接透過RUST 編譯執行  建議使用cargo 檢測全局版本 rustc --version cargo --version  RUST 使用hello world fn main() &amp;#123;     println!(&amp;quot;Hello, Rust!&amp;quot;); &amp;#125;  RUST 編譯執行 rustc main.rs ./main  carg",
+          date: "Mon Jun 02 2025 00:52:31 GMT+0800",
+          updated: "Mon Jun 02 2025 01:09:40 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>

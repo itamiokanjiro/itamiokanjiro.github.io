@@ -225,7 +225,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">15</div>
+    <div class="sidebar-state-number">17</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -300,6 +300,102 @@
   
   
     
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/02/GO%E5%9F%BA%E7%A4%8E/" aria-label="GO基礎"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="GO基礎" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-02</span>
+        <span><span class="icon-pencil"></span>56 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">GO基礎</h2>
+      <article class="post-article">
+        
+          到這邊安裝 [官網] (https://go.dev/dl/)
+查看版本  
+go version
+
+測試安裝是否成功
+package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main() &amp;#123;
+    fmt.Println(&amp;quot;Hello, Go!&amp;quot;)
+&amp;#125;
+
+測試
+go run main.go
+
+編譯    go build main.go    .&amp;#x2F;main.exe
+
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/02/Rust%E5%9F%BA%E7%A4%8E/" aria-label="Rust基礎"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="Rust基礎" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-02</span>
+        <span><span class="icon-pencil"></span>101 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">Rust基礎</h2>
+      <article class="post-article">
+        
+          Rust 官方的開發流程是透過 cargo（等於 Rust 的專案管理工具 + 套件管理 + 編譯工具）來管理所有事情，所以不推薦直接透過RUST 編譯執行  建議使用cargo
+檢測全局版本
+rustc --version
+cargo --version
+
+RUST 使用hello world
+fn main() &amp;#123;
+    println!(&amp;quot;Hello, Rust!&amp;quot;);
+&amp;#125;
+
+RUST 編譯執行
+rustc main.rs
+./main
+
+cargo 建立專案
+cargo new hello_rust
+cd hello_rust
+cargo ru
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
     
       <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
@@ -560,7 +656,7 @@ git swi
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2025-05-30</span>
-        <span><span class="icon-pencil"></span>64 字</span>
+        <span><span class="icon-pencil"></span>147 字</span>
         <span><span class="icon-clock"></span>1 分鐘</span>
       </div>
       <h2 class="post-title">linux基本命令基礎</h2>
@@ -582,7 +678,9 @@ sudo date +%T -s &amp;quot;19:59:00&amp;quot;
 顯示時間
 date
 
-
+顯示端口有無人使用
+sudo netstat -tuln | grep 4000
+COMMAND    PID USER FD
         
       </article>
     </div>
@@ -633,99 +731,6 @@ dotnet 第二個網站.dll
 </div>
       
     
-      <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/05/30/hexo%E5%9F%BA%E7%A4%8E/" aria-label="hexo基礎"></a>
-    
-    
-    <div class="post-cover-left">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="hexo基礎" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-05-30</span>
-        <span><span class="icon-pencil"></span>193 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">hexo基礎</h2>
-      <article class="post-article">
-        
-          hexo new創建一個新文章名為666
-hexo new &amp;quot;666&amp;quot;
-
-hexo g建置   並且cp -r 複製所有public&amp;#x2F; 目錄下的檔案 發送到&amp;#x2F;var&amp;#x2F;www&amp;#x2F;html3&amp;#x2F;
-hexo g &amp;amp;&amp;amp; cp -r public/* /var/www/html2/
-
-hexo 初始化
-hexo init
-
-npm install 根據當前資料夾中的package.json 依賴進行更新
-npm install 
-
-hexo server啟動  -i 開放0.0.0.0 端口4000 
-hexo serve
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/05/30/tmux%E5%9F%BA%E7%A4%8E/" aria-label="tmux基礎"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="tmux基礎" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-05-30</span>
-        <span><span class="icon-pencil"></span>83 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">tmux基礎</h2>
-      <article class="post-article">
-        
-          tmux attach -t 進入目標 名為hexo
-tmux attach -t hexo
-
-tmux new -s創建一個會話 名為hexo
-tmux new -s hexo
-
-tmux kill-session -t 刪除名為hexo的會話
-tmux kill-session -t hexo
-
-進出
-ctrl+b 再按d
-
-切換到編號1的視窗
-tmux select-window -t hexo:1  
-
-刪除編號1的視窗
-tmux kill-window -t hexo:1
-
-
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
   
 
 
@@ -762,10 +767,10 @@ tmux kill-window -t hexo:1
     
       <div>
         <span class="icon-brush"></span>
-        8.1k
+        8.4k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:48
+        00:50
       </div>
     
     
@@ -801,7 +806,7 @@ tmux kill-window -t hexo:1
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">15</div>
+    <div class="sidebar-state-number">17</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
