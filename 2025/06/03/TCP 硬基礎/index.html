@@ -43,7 +43,7 @@
 <meta property="og:description" content="TCP three-Way Handshake    Step Direction What’s Sent Function    SYN Client → Server I want to connect, here’s my sequence number Tells the server: I want to connect, get ready.   SYN+ACK Server → Cl">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-06-03T12:26:37.000Z">
-<meta property="article:modified_time" content="2025-06-02T18:02:25.361Z">
+<meta property="article:modified_time" content="2025-06-03T06:04:57.549Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta name="twitter:card" content="summary">
   
@@ -240,7 +240,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">24</div>
+    <div class="sidebar-state-number">28</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -375,50 +375,135 @@
 <table>
 <thead>
 <tr>
-<th>Step</th>
+<th>httpsStep</th>
 <th>Direction</th>
 <th>Action</th>
+<th>Protocol Layer</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>1</td>
+<td>0</td>
 <td>Client → Server</td>
-<td><strong>ClientHello</strong>: Supported cipher suites, TLS version, random number, SNI (Server Name Indication)</td>
+<td><strong>TCP SYN</strong>: Client initiates TCP connection (1st step of three-way handshake)</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Server → Client</td>
+<td><strong>TCP SYN+ACK</strong>: Server acknowledges and responds (2nd step)</td>
+<td>TCP</td>
 </tr>
 <tr>
 <td>2</td>
-<td>Server → Client</td>
-<td><strong>ServerHello</strong>: Selected cipher suite, TLS version, certificate, public key, server random number</td>
+<td>Client → Server</td>
+<td><strong>TCP ACK</strong>: Client acknowledges (3rd step), TCP connection established</td>
+<td>TCP</td>
 </tr>
 <tr>
 <td>3</td>
-<td>(optional)</td>
-<td><strong>Certificate Validation</strong>: Client verifies if the server’s certificate is valid</td>
+<td>Client → Server</td>
+<td><strong>ClientHello</strong>: Start TLS handshake</td>
+<td>TLS (over TCP)</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Client → Server</td>
-<td><strong>Pre-Master Key</strong>: Encrypted with the server’s public key and sent to establish a shared secret</td>
+<td>Server → Client</td>
+<td><strong>ServerHello</strong> + Certificate + Server random number</td>
+<td>TLS (over TCP)</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Both</td>
-<td><strong>Key Derivation</strong>: Both sides compute a symmetric encryption key based on the Pre-Master Key and random numbers</td>
+<td>(optional)</td>
+<td><strong>Certificate Validation</strong></td>
+<td>TLS (over TCP)</td>
 </tr>
 <tr>
 <td>6</td>
 <td>Client → Server</td>
-<td><strong>Finished</strong>: Encrypted “Finished” message using the newly derived key to indicate secure communication can begin</td>
+<td><strong>Pre-Master Key</strong></td>
+<td>TLS (over TCP)</td>
 </tr>
 <tr>
 <td>7</td>
+<td>Both</td>
+<td><strong>Key Derivation</strong></td>
+<td>TLS (over TCP)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Client → Server</td>
+<td><strong>Finished</strong></td>
+<td>TLS (over TCP)</td>
+</tr>
+<tr>
+<td>9</td>
 <td>Server → Client</td>
-<td><strong>Finished</strong>: Server responds with its own encrypted “Finished” message to confirm the handshake is complete</td>
+<td><strong>Finished</strong></td>
+<td>TLS (over TCP)</td>
 </tr>
 <tr>
 <td>Finished</td>
 <td>Secure Channel</td>
-<td>A secure encrypted channel is established and HTTPS communication (HTTP over TLS) begins</td>
+<td>Secure encrypted channel established, start HTTP over TLS</td>
+<td>HTTPS</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>httpStep</th>
+<th>Direction</th>
+<th>Action</th>
+<th>Protocol Layer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Client → Server</td>
+<td><strong>TCP SYN</strong>: Initiate TCP connection (1st handshake)</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Server → Client</td>
+<td><strong>TCP SYN+ACK</strong>: Acknowledge connection (2nd handshake)</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Client → Server</td>
+<td><strong>TCP ACK</strong>: Finalize handshake (3rd handshake)</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Client → Server</td>
+<td><strong>HTTP Request</strong> (e.g., GET &#x2F;index.html)</td>
+<td>HTTP over TCP</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Server → Client</td>
+<td><strong>HTTP Response</strong> (e.g., 200 OK + content)</td>
+<td>HTTP over TCP</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Client ↔ Server</td>
+<td><strong>Optional further HTTP requests&#x2F;responses</strong></td>
+<td>HTTP over TCP</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Client → Server</td>
+<td><strong>HTTP Keep-Alive &#x2F; Connection Close</strong></td>
+<td>HTTP over TCP</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Client ↔ Server</td>
+<td><strong>TCP FIN&#x2F;ACK</strong>: Terminate TCP connection</td>
+<td>TCP</td>
 </tr>
 </tbody></table>
 
@@ -440,20 +525,37 @@
   
   <nav id="article-nav" data-aos="fade-up">
     
+      
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          
+          
+            <img data-src="/images/600211.webp" data-sizes="auto" alt="openvpn" class="lazyload">
+          
+        
+        <a href="/2025/06/04/openvpn/"></a>
+        <div class="article-nav-caption">Newer</div>
+        <h3 class="article-nav-title">
+          
+            openvpn
+          
+        </h3>
+      </div>
+    
     
     
     <div class="article-nav-link-wrap article-nav-link-right">
       
         
         
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="Discord基礎" class="lazyload">
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="Termshark &amp; Wireshark" class="lazyload">
         
       
-      <a href="/2025/06/02/Discord/"></a>
+      <a href="/2025/06/03/Termshark%20Wireshark/"></a>
       <div class="article-nav-caption">Older</div>
       <h3 class="article-nav-title">
         
-          Discord基礎
+          Termshark &amp; Wireshark
         
       </h3>
     </div>
@@ -499,10 +601,10 @@
     
       <div>
         <span class="icon-brush"></span>
-        9.5k
+        9.9k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:57
+        01:02
       </div>
     
     
@@ -548,7 +650,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">24</div>
+    <div class="sidebar-state-number">28</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -698,7 +800,7 @@
           description: "",
           stripContent: "TCP three-Way Handshake    Step Direction What’s Sent Function    SYN Client → Server I want to connect, here’s my sequence number Tells the server: I want to connect, get ready.   SYN+ACK Server → Client I accept, here’s my sequence number, and I go",
           date: "Tue Jun 03 2025 20:26:37 GMT+0800",
-          updated: "Tue Jun 03 2025 02:02:25 GMT+0800",
+          updated: "Tue Jun 03 2025 14:04:57 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>
