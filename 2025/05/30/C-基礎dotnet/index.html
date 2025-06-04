@@ -43,7 +43,7 @@
 <meta property="og:description" content="用 snap 安裝 dotnet-sdk經典模式 –classic表示這個 snap 需要較多系統權限，允許比較自由的存取系統檔案，類似傳統安裝方式 sudo snap install dotnet-sdk --classic  建立一個別名 (alias)，讓你用更簡短的指令呼叫 snap 裡的程式。使我能輸入dotnet 調用 sudo snap alias dotnet-sdk.dotnet">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-05-30T13:37:38.000Z">
-<meta property="article:modified_time" content="2025-06-01T17:19:51.417Z">
+<meta property="article:modified_time" content="2025-06-04T21:00:48.911Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta name="twitter:card" content="summary">
   
@@ -325,7 +325,7 @@
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-05-30T13:37:38.000Z" itemprop="datePublished">2025-05-30</time>
-    <time style="display: none;" id="post-update-time">2025-06-02</time>
+    <time style="display: none;" id="post-update-time">2025-06-05</time>
   </span>
 </div>
 
@@ -353,6 +353,23 @@
 </code></pre>
 <p>開啟</p>
 <pre><code>dotnet 第二個網站.dll
+</code></pre>
+<p>windows中執行</p>
+<pre><code>Add-Migration InitialCreate
+dotnet ef migrations add InitialCreate --project ./第二個網站/第二個網站.csproj --startup-project ./第二個網站/第二個網站.csproj
+</code></pre>
+<p>切換數據庫 從sql server切換到mysql</p>
+<pre><code>將NuGet 換成調整成Pomelo.EntityFrameworkCore.MySql
+然後把報錯的Program.cs 調整成
+//builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+//    options.UseSqlServer(connectionString));
+builder.Services.AddDbContext&lt;ApplicationDbContext&gt;(options =&gt;
+    options.UseMySql(
+        builder.Configuration.GetConnectionString(&quot;DefaultConnection&quot;),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString(&quot;DefaultConnection&quot;))
+    ));
+這樣
+然後 把報錯 的其餘代碼刪除即可
 </code></pre>
 
       
@@ -449,7 +466,7 @@
     
       <div>
         <span class="icon-brush"></span>
-        9.7k
+        9.9k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
         01:01
@@ -648,7 +665,7 @@
           description: "",
           stripContent: "用 snap 安裝 dotnet-sdk經典模式 –classic表示這個 snap 需要較多系統權限，允許比較自由的存取系統檔案，類似傳統安裝方式 sudo snap install dotnet-sdk --classic  建立一個別名 (alias)，讓你用更簡短的指令呼叫 snap 裡的程式。使我能輸入dotnet 調用 sudo snap alias dotnet-sdk.dotnet dotnet  驗證安裝 dotnet --version  開啟 dotnet 第二個網站.dl",
           date: "Fri May 30 2025 21:37:38 GMT+0800",
-          updated: "Mon Jun 02 2025 01:19:51 GMT+0800",
+          updated: "Thu Jun 05 2025 05:00:48 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>
