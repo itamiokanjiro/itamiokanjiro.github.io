@@ -225,7 +225,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">28</div>
+    <div class="sidebar-state-number">30</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -300,6 +300,87 @@
   
   
     
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/02/OSCP-Exam-Report/" aria-label="OSCP-Exam-Report"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="OSCP-Exam-Report" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-02</span>
+        <span><span class="icon-pencil"></span>96 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">OSCP-Exam-Report</h2>
+      <article class="post-article">
+        
+          install
+apt install texlive-latex-recommended texlive-fonts-extra texlive-latex-extra pandoc p7zip-full
+
+upgrade
+sudo apt update
+sudo apt install ruby ruby-dev build-essential
+gem install bundler
+undle install
+sudo apt install texlive-full
+
+download
+git clone https://github.com/noraj/OSCP-Exam-Repor
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/02/mysql%E5%9F%BA%E7%A4%8E/" aria-label="mysql基礎"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="mysql基礎" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-02</span>
+        <span><span class="icon-pencil"></span>95 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">mysql基礎</h2>
+      <article class="post-article">
+        
+          PHP連接mysql
+$conn = new mysqli(&amp;quot;localhost&amp;quot;, &amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;);
+
+
+$sql = &amp;quot;CREATE DATABASE database1&amp;quot;;
+$conn-&amp;gt;query($sql)
+
+$conn = new mysqli(&amp;quot;localhost&amp;quot;, &amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;, &amp;quot;database1&amp;quot;);
+$query = &amp;quot;select * from table_1&amp;
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
     
       <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
@@ -639,100 +720,6 @@ git swi
 </div>
       
     
-      <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/05/30/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E5%9F%BA%E7%A4%8E/" aria-label="linux基本命令基礎"></a>
-    
-    
-    <div class="post-cover-left">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="linux基本命令基礎" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-05-30</span>
-        <span><span class="icon-pencil"></span>204 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">linux基本命令基礎</h2>
-      <article class="post-article">
-        
-          重新啟動nginx
-sudo systemctl restart nginx
-
-設定timedatectl的時間  亞洲台北
-sudo timedatectl set-timezone Asia/Taipei
-
-開關 自動 更新時間工具
-sudo timedatectl set-ntp true
-sudo timedatectl set-ntp false
-
-調整時間為
-sudo date +%T -s &amp;quot;19:59:00&amp;quot;
-
-顯示時間
-date
-
-顯示端口有無人使用
-sudo netstat -tuln | grep 4000
-COMMAND    PID USER FD
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/05/30/C-%E5%9F%BA%E7%A4%8Edotnet/" aria-label="C#基礎dotnet"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="C#基礎dotnet" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-05-30</span>
-        <span><span class="icon-pencil"></span>224 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">C#基礎dotnet</h2>
-      <article class="post-article">
-        
-          用 snap 安裝 dotnet-sdk經典模式 –classic表示這個 snap 需要較多系統權限，允許比較自由的存取系統檔案，類似傳統安裝方式
-sudo snap install dotnet-sdk --classic
-
-建立一個別名 (alias)，讓你用更簡短的指令呼叫 snap 裡的程式。使我能輸入dotnet 調用
-sudo snap alias dotnet-sdk.dotnet dotnet
-
-驗證安裝
-dotnet --version
-
-開啟
-dotnet 第二個網站.dll
-
-windows中執行
-Add-Migration InitialCreate
-dotnet e
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
   
 
 
@@ -769,10 +756,10 @@ dotnet e
     
       <div>
         <span class="icon-brush"></span>
-        9.9k
+        10.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:01
+        01:03
       </div>
     
     
@@ -808,7 +795,7 @@ dotnet e
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">28</div>
+    <div class="sidebar-state-number">30</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
