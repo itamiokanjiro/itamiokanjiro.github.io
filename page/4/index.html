@@ -17,7 +17,6 @@
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_0khxww3tj3q9';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)","zh-CN":"复制成功 (*^▽^*)","zh-TW":"複製成功 (*^▽^*)","ja":"コピー成功 (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ","zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","zh-TW":"複製失敗 (ﾟ⊿ﾟ)ﾂ","ja":"コピー失敗 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://itamiokanjiro.ddns.net:3111';</script>
   
   <title>
-    彙整: 2025 |
     
     學習日誌
   </title>
@@ -37,7 +36,7 @@
   
     <meta property="og:type" content="website">
 <meta property="og:title" content="學習日誌">
-<meta property="og:url" content="https://itamiokanjiro.ddns.net:3111/archives/2025/page/3/index.html">
+<meta property="og:url" content="https://itamiokanjiro.ddns.net:3111/page/4/index.html">
 <meta property="og:site_name" content="學習日誌">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://itamiokanjiro.ddns.net:3111/images/600211.webp">
@@ -196,15 +195,13 @@
         
         
           <a href="/" id="logo">
-            <h1 data-aos="slide-up">歸檔</h1>
+            <h1 data-aos="slide-up">學習日誌</h1>
           </a>
         
       
       
         
         <h2 id="subtitle-wrap" data-aos="slide-down">
-          
-            <a href="/" id="subtitle">2025</a>
           
         </h2>
       
@@ -300,190 +297,91 @@
 </aside>
 
           <section id="main">
-<div class="archives-outer-wrap" data-aos="fade-up">
-  
-    <div class="tag-wrap">
-  
-</div>
-<div class="category-wrap">
-  
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/%E8%AA%9E%E8%A8%80%E9%81%A9%E6%87%89/">語言適應</a>
-    </div>
-  
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/linux/">linux</a>
-    </div>
-  
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E5%9F%BA%E7%A4%8E/">網站部署基礎</a>
-    </div>
-  
-</div>
   
   
     
     
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
     
-      
+      <a class="post-link" href="/2025/05/29/%E9%82%84%E5%8E%9Fcryptojs%E6%8E%A1%E5%9D%91%E7%B4%80%E9%8C%84/" aria-label="還原cryptojs AES-CTR採坑紀錄"></a>
+    
+    
+    <div class="post-cover-left">
       
         
         
-        <section class="archives-wrap" data-aos="fade-up">
-          <div class="archive-year-wrap">
-            <a href="/archives/2025" class="archive-year">2025</a>
-          </div>
-          <ul>
-            
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <span>
-      <time class="dt-published" datetime="2025-05-30T14:08:04.000Z" itemprop="datePublished">05-30</time>
-    </span>
-  </div>
-  
-    <a class="archive-article-title" href="/2025/05/30/YARA%E8%A6%8F%E5%89%87%E5%9F%BA%E7%A4%8E/">YARA規則基礎</a>
-  
-</li>
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="還原cryptojs AES-CTR採坑紀錄" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-05-29</span>
+        <span><span class="icon-pencil"></span>2k 字</span>
+        <span><span class="icon-clock"></span>11 分鐘</span>
+      </div>
+      <h2 class="post-title">還原cryptojs AES-CTR採坑紀錄</h2>
+      <article class="post-article">
+        
+          我原本 以為C++和C#還原cryptojs丟入GPT就能解出算法
+function encrypt(message, secretKey) &amp;#123;
+    var hash = CryptoJS.SHA256(secretKey + &amp;#39;one-deep&amp;#39;);
+    var key = hash.toString(CryptoJS.enc.Base64).substr(0, 32);
 
-            
-      
-      
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <span>
-      <time class="dt-published" datetime="2025-05-30T13:40:55.000Z" itemprop="datePublished">05-30</time>
-    </span>
+    hash = CryptoJS.SHA256(secretKey.substr(0, 16));
+    var ive = hash.toString(CryptoJS.enc
+        
+      </article>
+    </div>
   </div>
-  
-    <a class="archive-article-title" href="/2025/05/30/git%E5%9F%BA%E7%A4%8E/">git基礎</a>
-  
-</li>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/05/27/echo%E5%9F%BA%E7%A4%8E/" aria-label="學習"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="學習" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-05-27</span>
+        <span><span class="icon-pencil"></span>668 字</span>
+        <span><span class="icon-clock"></span>3 分鐘</span>
+      </div>
+      <h2 class="post-title">學習</h2>
+      <article class="post-article">
+        
+          hex+ASCII模式 正常順序  且-n &amp;#x3D; 有沒有換行符號
+echo -n &amp;quot;cat /flag.txt&amp;quot; | hexdump -C
 
-            
-      
-      
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <span>
-      <time class="dt-published" datetime="2025-05-30T13:40:22.000Z" itemprop="datePublished">05-30</time>
-    </span>
+這裡是以 2 bytes（16 位元）一組來顯示，每組是 4 個十六進位數字 16-bit Word 模式
+echo -n &amp;quot;cat /flag.txt&amp;quot; | hexdump
+
+這是 轉換ROT13
+echo &amp;quot;cvpbPGS&amp;#123;arkg_gvzr_V&amp;#39;yy_gel_2_ebhaqf_bs_ebg13_uJdSftmh&amp;#125;&amp;quot; | tr &amp;#39;A-Za-z&amp;#3
+        
+      </article>
+    </div>
   </div>
-  
-    <a class="archive-article-title" href="/2025/05/30/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E5%9F%BA%E7%A4%8E/">linux基本命令基礎</a>
-  
-</li>
-
-            
+</div>
       
-      
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <span>
-      <time class="dt-published" datetime="2025-05-30T13:37:38.000Z" itemprop="datePublished">05-30</time>
-    </span>
-  </div>
-  
-    <a class="archive-article-title" href="/2025/05/30/C-%E5%9F%BA%E7%A4%8Edotnet/">C#基礎dotnet</a>
-  
-</li>
-
-            
-      
-      
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <span>
-      <time class="dt-published" datetime="2025-05-30T13:34:48.000Z" itemprop="datePublished">05-30</time>
-    </span>
-  </div>
-  
-    <a class="archive-article-title" href="/2025/05/30/hexo%E5%9F%BA%E7%A4%8E/">hexo基礎</a>
-  
-</li>
-
-            
-      
-      
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <span>
-      <time class="dt-published" datetime="2025-05-30T13:34:34.000Z" itemprop="datePublished">05-30</time>
-    </span>
-  </div>
-  
-    <a class="archive-article-title" href="/2025/05/30/tmux%E5%9F%BA%E7%A4%8E/">tmux基礎</a>
-  
-</li>
-
-            
-      
-      
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <span>
-      <time class="dt-published" datetime="2025-05-30T13:20:06.000Z" itemprop="datePublished">05-30</time>
-    </span>
-  </div>
-  
-    <a class="archive-article-title" href="/2025/05/30/grep%E5%9F%BA%E7%A4%8E/">grep基礎</a>
-  
-</li>
-
-            
-      
-      
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <span>
-      <time class="dt-published" datetime="2025-05-30T12:26:37.000Z" itemprop="datePublished">05-30</time>
-    </span>
-  </div>
-  
-    <a class="archive-article-title" href="/2025/05/30/apk%E9%80%86%E5%90%91%E5%9F%BA%E7%A4%8E/">apk逆向基礎</a>
-  
-</li>
-
-            
-      
-      
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <span>
-      <time class="dt-published" datetime="2025-05-30T12:26:37.000Z" itemprop="datePublished">05-30</time>
-    </span>
-  </div>
-  
-    <a class="archive-article-title" href="/2025/05/30/chrome%20console/">chrome console</a>
-  
-</li>
-
-            
-      
-      
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <span>
-      <time class="dt-published" datetime="2025-05-30T10:43:08.000Z" itemprop="datePublished">05-30</time>
-    </span>
-  </div>
-  
-    <a class="archive-article-title" href="/2025/05/30/hash%E9%A1%9E%E5%9E%8B/">hash類型</a>
-  
-</li>
-
-            
-            
-          </ul>
-        </section>
     
   
-  </div>
 
 
   <nav id="page-nav" data-aos="fade-up">
     
-    <a class="extend prev" rel="prev" href="/archives/2025/page/2/">&laquo; 上一頁</a><a class="page-number" href="/archives/2025/">1</a><a class="page-number" href="/archives/2025/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2025/page/4/">4</a><a class="extend next" rel="next" href="/archives/2025/page/4/">下一頁 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一頁</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
   </nav>
 
 
