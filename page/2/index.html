@@ -225,7 +225,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">32</div>
+    <div class="sidebar-state-number">34</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -300,6 +300,95 @@
   
   
     
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/03/tshark/" aria-label="tshark"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="tshark" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-03</span>
+        <span><span class="icon-pencil"></span>194 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">tshark</h2>
+      <article class="post-article">
+        
+          TShark Help
+tshark -h
+
+where tshark
+which tshark
+
+interfaces List
+tshark -D
+
+list the Link-layer from interface
+tshark -L
+tshark -i ens33 -L
+
+switch interface
+tshark -i 2
+
+Selecting an Interface &amp;amp; Writing to a File
+tshark -i eth0 -w /tmp/test.pcap
+
+Selecting an Interface &amp;amp; Applying Filters
+t
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/02/Discord/" aria-label="Discord基礎"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="Discord基礎" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-02</span>
+        <span><span class="icon-pencil"></span>44 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">Discord基礎</h2>
+      <article class="post-article">
+        
+          下載
+git clone https://github.com/discord/discord-example-app.git
+
+cd 然後將
+.&amp;#x2F;env sample 改成.&amp;#x2F;env填好參數
+邀請
+https://discord.com/oauth2/authorize?client_id=1379075368144867338&amp;amp;permissions=2147483648&amp;amp;scope=bot%20applications.commands
+
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
     
       <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
@@ -425,7 +514,7 @@ git clone https://github.com/noraj/OSCP-Exam-Repor
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2025-06-02</span>
-        <span><span class="icon-pencil"></span>223 字</span>
+        <span><span class="icon-pencil"></span>233 字</span>
         <span><span class="icon-clock"></span>1 分鐘</span>
       </div>
       <h2 class="post-title">PHP基礎</h2>
@@ -466,13 +555,16 @@ if ($_SERVER[&amp;#39;REQUEST_METHOD&amp;#39;] === &amp;#39;POST&amp;#39; &amp;a
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2025-06-02</span>
-        <span><span class="icon-pencil"></span>95 字</span>
+        <span><span class="icon-pencil"></span>138 字</span>
         <span><span class="icon-clock"></span>1 分鐘</span>
       </div>
       <h2 class="post-title">mysql基礎</h2>
       <article class="post-article">
         
-          PHP連接mysql
+          進入
+mysql -u root -p
+
+PHP連接mysql
 $conn = new mysqli(&amp;quot;localhost&amp;quot;, &amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;);
 
 
@@ -480,7 +572,7 @@ $sql = &amp;quot;CREATE DATABASE database1&amp;quot;;
 $conn-&amp;gt;query($sql)
 
 $conn = new mysqli(&amp;quot;localhost&amp;quot;, &amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;, &amp;quot;database1&amp;quot;);
-$query = &amp;quot;select * from table_1&amp;
+$query = &amp;quot;s
         
       </article>
     </div>
@@ -659,90 +751,6 @@ node -v
 </div>
       
     
-      <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/05/31/react%E6%92%9E%E7%89%86/" aria-label="react撞牆"></a>
-    
-    
-    <div class="post-cover-left">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="react撞牆" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-05-31</span>
-        <span><span class="icon-pencil"></span>139 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">react撞牆</h2>
-      <article class="post-article">
-        
-          react用的
-npm install --save-dev gh-pages
-
-.git資料夾的遠端推送設定優先於所有設定  所以先看遠端 再改設定
-git remote -v
-git remote set-url origin git@github.com:itamiokanjiro/test.github.io.git
-
-一鍵部屬
-rm -rf build &amp;amp;&amp;amp; npm run build &amp;amp;&amp;amp; npm run deploy
-
-靜態檔案package.json設定
-&amp;quot;homepage&amp;quot;: &amp;quot;https://itamiokanj
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/05/31/gh%E5%9F%BA%E7%A4%8E/" aria-label="gh基礎"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="gh基礎" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-05-31</span>
-        <span><span class="icon-pencil"></span>140 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">gh基礎</h2>
-      <article class="post-article">
-        
-          改成main
-gh api \
--X PATCH \
--H &amp;quot;Accept: application/vnd.github+json&amp;quot; \
-/repos/itamiokanjiro/itamiokanjiro.github.io \
--f default_branch=main
-
-22
-curl -X PATCH \
--H &amp;quot;Authorization: token 我的token&amp;quot; \
--H &amp;quot;Accept: application/vnd.github+json&amp;quot; \
-https://api.github.com/repos/it
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
   
 
 
@@ -779,10 +787,10 @@ https://api.github.com/repos/it
     
       <div>
         <span class="icon-brush"></span>
-        10.3k
+        11k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:05
+        01:07
       </div>
     
     
@@ -818,7 +826,7 @@ https://api.github.com/repos/it
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">32</div>
+    <div class="sidebar-state-number">34</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>

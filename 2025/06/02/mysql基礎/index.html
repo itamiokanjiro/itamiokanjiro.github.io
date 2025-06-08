@@ -35,15 +35,15 @@
 
   
   
-    <meta name="description" content="PHP連接mysql $conn &#x3D; new mysqli(&quot;localhost&quot;, &quot;user&quot;, &quot;pass&quot;);   $sql &#x3D; &quot;CREATE DATABASE database1&quot;; $conn-&gt;query($sql)  $conn &#x3D; new mysqli(&quot;localhost&amp;quot">
+    <meta name="description" content="進入 mysql -u root -p  PHP連接mysql $conn &#x3D; new mysqli(&quot;localhost&quot;, &quot;user&quot;, &quot;pass&quot;);   $sql &#x3D; &quot;CREATE DATABASE database1&quot;; $conn-&gt;query($sql)  $conn &#x3D; new mysqli">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql基礎">
 <meta property="og:url" content="https://itamiokanjiro.ddns.net:3111/2025/06/02/mysql%E5%9F%BA%E7%A4%8E/index.html">
 <meta property="og:site_name" content="學習日誌">
-<meta property="og:description" content="PHP連接mysql $conn &#x3D; new mysqli(&quot;localhost&quot;, &quot;user&quot;, &quot;pass&quot;);   $sql &#x3D; &quot;CREATE DATABASE database1&quot;; $conn-&gt;query($sql)  $conn &#x3D; new mysqli(&quot;localhost&amp;quot">
+<meta property="og:description" content="進入 mysql -u root -p  PHP連接mysql $conn &#x3D; new mysqli(&quot;localhost&quot;, &quot;user&quot;, &quot;pass&quot;);   $sql &#x3D; &quot;CREATE DATABASE database1&quot;; $conn-&gt;query($sql)  $conn &#x3D; new mysqli">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-06-02T05:00:14.000Z">
-<meta property="article:modified_time" content="2025-06-04T17:07:41.383Z">
+<meta property="article:modified_time" content="2025-06-06T15:57:04.490Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta name="twitter:card" content="summary">
   
@@ -240,7 +240,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">32</div>
+    <div class="sidebar-state-number">34</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -325,7 +325,7 @@
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-06-02T05:00:14.000Z" itemprop="datePublished">2025-06-02</time>
-    <time style="display: none;" id="post-update-time">2025-06-05</time>
+    <time style="display: none;" id="post-update-time">2025-06-06</time>
   </span>
 </div>
 
@@ -338,7 +338,10 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <p>PHP連接mysql</p>
+        <p>進入</p>
+<pre><code>mysql -u root -p
+</code></pre>
+<p>PHP連接mysql</p>
 <pre><code>$conn = new mysqli(&quot;localhost&quot;, &quot;user&quot;, &quot;pass&quot;);
 
 
@@ -361,6 +364,17 @@ echo $row[&quot;name&quot;].&quot;&lt;br&gt;&quot;;
 </code></pre>
 <p>查版本</p>
 <pre><code>SELECT VERSION();
+</code></pre>
+<p>查表</p>
+<pre><code>SHOW TABLES FROM 資料庫名稱;
+SHOW TABLES;
+</code></pre>
+<p>查庫</p>
+<pre><code>SHOW DATABASES;
+
+SELECT SCHEMA_NAME
+FROM INFORMATION_SCHEMA.SCHEMATA
+WHERE SCHEMA_NAME NOT IN (&#39;information_schema&#39;, &#39;mysql&#39;, &#39;performance_schema&#39;, &#39;sys&#39;);
 </code></pre>
 
       
@@ -457,10 +471,10 @@ echo $row[&quot;name&quot;].&quot;&lt;br&gt;&quot;;
     
       <div>
         <span class="icon-brush"></span>
-        10.3k
+        11k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:05
+        01:07
       </div>
     
     
@@ -506,7 +520,7 @@ echo $row[&quot;name&quot;].&quot;&lt;br&gt;&quot;;
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">32</div>
+    <div class="sidebar-state-number">34</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -654,9 +668,9 @@ echo $row[&quot;name&quot;].&quot;&lt;br&gt;&quot;;
           url: "https://itamiokanjiro.ddns.net:3111/2025/06/02/mysql%E5%9F%BA%E7%A4%8E/",
           excerpt: "",
           description: "",
-          stripContent: "PHP連接mysql $conn = new mysqli(&amp;quot;localhost&amp;quot;, &amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;);   $sql = &amp;quot;CREATE DATABASE database1&amp;quot;; $conn-&amp;gt;query($sql)  $conn = new mysqli(&amp;quot;localhost&amp;quot;, &amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;, &amp;quot;datab",
+          stripContent: "進入 mysql -u root -p  PHP連接mysql $conn = new mysqli(&amp;quot;localhost&amp;quot;, &amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;);   $sql = &amp;quot;CREATE DATABASE database1&amp;quot;; $conn-&amp;gt;query($sql)  $conn = new mysqli(&amp;quot;localhost&amp;quot;, &amp;quot;user&amp;quot;, &amp;quot;pa",
           date: "Mon Jun 02 2025 13:00:14 GMT+0800",
-          updated: "Thu Jun 05 2025 01:07:41 GMT+0800",
+          updated: "Fri Jun 06 2025 23:57:04 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>

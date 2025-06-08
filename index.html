@@ -225,7 +225,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">32</div>
+    <div class="sidebar-state-number">34</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -304,6 +304,90 @@
       <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
     
+      <a class="post-link" href="/2025/06/09/mysql%E5%AE%89%E8%A3%9D/" aria-label="mysql安裝"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="mysql安裝" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-09</span>
+        <span><span class="icon-pencil"></span>154 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">mysql安裝</h2>
+      <article class="post-article">
+        
+          開外網
+/etc/mysql/mysql.conf.d/mysqld.cnf
+
+重啟
+sudo systemctl restart mysql
+
+安裝
+sudo apt install mysql-server
+
+進入
+sudo mysql -u root -p
+
+改密
+ALTER USER &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;MyNewRootPass&amp;#39;;
+FLUSH PRIVILEGES;
+
+創建用戶
+CREATE USER &amp;#39;hacker&amp;#39;@&amp;#39;localhost&amp;#39; IDENTI
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/06/powershell%E7%94%A8%E6%B3%95/" aria-label="powershell用法"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="powershell用法" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-06</span>
+        <span><span class="icon-pencil"></span>28 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">powershell用法</h2>
+      <article class="post-article">
+        
+          Get-ChildItem C:\
+arp -a
+ssh -Y -p 1998 hacker@192.168.1.104
+go run main.go
+runas &amp;#x2F;user:12345646 “N:\XL\FFO\FFOnline\Launcher.exe”
+
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
       <a class="post-link" href="/2025/06/06/nmap%E7%94%A8%E6%B3%95/" aria-label="nmap用法"></a>
     
     
@@ -318,7 +402,7 @@
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2025-06-06</span>
-        <span><span class="icon-pencil"></span>53 字</span>
+        <span><span class="icon-pencil"></span>185 字</span>
         <span><span class="icon-clock"></span>1 分鐘</span>
       </div>
       <h2 class="post-title">nmap用法</h2>
@@ -326,14 +410,11 @@
         
           while read ip; do    echo “&amp;#x3D;&amp;#x3D; Scanning $ip &amp;#x3D;&amp;#x3D;” | tee -a 456.txt    nmap -sV “$ip” | tee -a 456.txt    echo “” &amp;gt;&amp;gt; 456.txtdone &amp;lt; 123.txt
 nmap -sV -iL 123.txt -oN 456.txt
-nmap –script&amp;#x3D;ftp-brute -p21-sS 
+nmap –script&amp;#x3D;ftp-brute -p21-sS  安靜查詢
+nmap itamiokanjiro.ddns.net -sV 
+-p--p 3306-Pn-O  查看OS 
 搜尋
-searchsploit plesk
-
-更新
-searchsploit -u
-
-
+se
         
       </article>
     </div>
@@ -555,7 +636,7 @@ sudo openvpn –config academy-regular.ovpn &amp;amp;
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2025-06-03</span>
-        <span><span class="icon-pencil"></span>129 字</span>
+        <span><span class="icon-pencil"></span>222 字</span>
         <span><span class="icon-clock"></span>1 分鐘</span>
       </div>
       <h2 class="post-title">TCP 硬基礎</h2>
@@ -634,95 +715,6 @@ tcp.stream eq 7
 </div>
       
     
-      <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/06/03/tshark/" aria-label="tshark"></a>
-    
-    
-    <div class="post-cover-left">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="tshark" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-06-03</span>
-        <span><span class="icon-pencil"></span>194 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">tshark</h2>
-      <article class="post-article">
-        
-          TShark Help
-tshark -h
-
-where tshark
-which tshark
-
-interfaces List
-tshark -D
-
-list the Link-layer from interface
-tshark -L
-tshark -i ens33 -L
-
-switch interface
-tshark -i 2
-
-Selecting an Interface &amp;amp; Writing to a File
-tshark -i eth0 -w /tmp/test.pcap
-
-Selecting an Interface &amp;amp; Applying Filters
-t
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/06/02/Discord/" aria-label="Discord基礎"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="Discord基礎" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-06-02</span>
-        <span><span class="icon-pencil"></span>44 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">Discord基礎</h2>
-      <article class="post-article">
-        
-          下載
-git clone https://github.com/discord/discord-example-app.git
-
-cd 然後將
-.&amp;#x2F;env sample 改成.&amp;#x2F;env填好參數
-邀請
-https://discord.com/oauth2/authorize?client_id=1379075368144867338&amp;amp;permissions=2147483648&amp;amp;scope=bot%20applications.commands
-
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
   
 
 
@@ -759,10 +751,10 @@ https://discord.com/oauth2/authorize?client_id=1379075368144867338&amp;amp;permi
     
       <div>
         <span class="icon-brush"></span>
-        10.3k
+        11k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:05
+        01:07
       </div>
     
     
@@ -798,7 +790,7 @@ https://discord.com/oauth2/authorize?client_id=1379075368144867338&amp;amp;permi
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">32</div>
+    <div class="sidebar-state-number">34</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
