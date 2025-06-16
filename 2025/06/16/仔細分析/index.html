@@ -35,15 +35,15 @@
 
   
   
-    <meta name="description" content="{“level”:”error”,”timestamp”:”2025-06-16T18:10:43.426849691+08:00”,”message”:”build failed”,”service”:”orchestration-api”,”internal”:true,”pid”:1056502,”template.id”:”yf0qzjw458rcn5nv80g5”,”debug_id”:">
+    <meta name="description" content="錯誤訊息 &#123;&quot;level&quot;:&quot;error&quot;,&quot;timestamp&quot;:&quot;2025-06-16T18:10:43.426849691+08:00&quot;,&quot;message&quot;:&quot;build failed&quot;,&quot;service&quot;:&quot;orchestratio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="仔細分析">
 <meta property="og:url" content="https://itamiokanjiro.ddns.net:3111/2025/06/16/%E4%BB%94%E7%B4%B0%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="學習日誌">
-<meta property="og:description" content="{“level”:”error”,”timestamp”:”2025-06-16T18:10:43.426849691+08:00”,”message”:”build failed”,”service”:”orchestration-api”,”internal”:true,”pid”:1056502,”template.id”:”yf0qzjw458rcn5nv80g5”,”debug_id”:">
+<meta property="og:description" content="錯誤訊息 &#123;&quot;level&quot;:&quot;error&quot;,&quot;timestamp&quot;:&quot;2025-06-16T18:10:43.426849691+08:00&quot;,&quot;message&quot;:&quot;build failed&quot;,&quot;service&quot;:&quot;orchestratio">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-06-16T08:31:41.000Z">
-<meta property="article:modified_time" content="2025-06-16T12:26:58.239Z">
+<meta property="article:modified_time" content="2025-06-16T13:06:58.938Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta name="twitter:card" content="summary">
   
@@ -338,111 +338,139 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <p>{“level”:”error”,”timestamp”:”2025-06-16T18:10:43.426849691+08:00”,”message”:”build failed”,”service”:”orchestration-api”,”internal”:true,”pid”:1056502,”template.id”:”yf0qzjw458rcn5nv80g5”,”debug_id”:null,”error”:”failed to create template ‘yf0qzjw458rcn5nv80g5’: [Unimplemented] unknown service TemplateService”,”stacktrace”:”github.com&#x2F;e2b-dev&#x2F;infra&#x2F;packages&#x2F;shared&#x2F;pkg&#x2F;telemetry.ReportCriticalError\n\t&#x2F;kok&#x2F;todo-api&#x2F;main4&#x2F;packages&#x2F;shared&#x2F;pkg&#x2F;telemetry&#x2F;tracing.go:80\ngithub.com&#x2F;e2b-dev&#x2F;infra&#x2F;packages&#x2F;api&#x2F;internal&#x2F;handlers.(*APIStore).PostTemplatesTemplateIDBuildsBuildID\n\t&#x2F;kok&#x2F;todo-api&#x2F;main4&#x2F;packages&#x2F;api&#x2F;internal&#x2F;handlers&#x2F;template_start_build.go:160\ngithub.com&#x2F;e2b-dev&#x2F;infra&#x2F;packages&#x2F;api&#x2F;internal&#x2F;api.(*ServerInterfaceWrapper).PostTemplatesTemplateIDBuildsBuildID\n\t&#x2F;kok&#x2F;todo-api&#x2F;main4&#x2F;packages&#x2F;api&#x2F;internal&#x2F;api&#x2F;api.gen.go:848\ngithub.com&#x2F;gin-gonic&#x2F;gin.(*Context).Next\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-gonic&#x2F;<a href="mailto:&#x67;&#x69;&#110;&#x40;&#118;&#x31;&#46;&#x31;&#x30;&#46;&#x30;">gin@v1.10.0</a>&#x2F;context.go:185\ngithub.com&#x2F;gin-contrib&#x2F;zap.GinzapWithConfig.func1\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-contrib&#x2F;<a href="mailto:&#122;&#x61;&#x70;&#64;&#x76;&#49;&#x2e;&#x31;&#x2e;&#52;">zap@v1.1.4</a>&#x2F;zap.go:68\nmain.NewGinServer.func1\n\t&#x2F;kok&#x2F;todo-api&#x2F;main4&#x2F;packages&#x2F;api&#x2F;main.go:157\ngithub.com&#x2F;e2b-dev&#x2F;infra&#x2F;packages&#x2F;api&#x2F;internal&#x2F;middleware.ExcludeRoutes.func1\n\t&#x2F;kok&#x2F;todo-api&#x2F;main4&#x2F;packages&#x2F;api&#x2F;internal&#x2F;middleware&#x2F;exclude.go:14\ngithub.com&#x2F;gin-gonic&#x2F;gin.(*Context).Next\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-gonic&#x2F;<a href="mailto:&#103;&#105;&#x6e;&#64;&#118;&#x31;&#x2e;&#x31;&#x30;&#x2e;&#x30;">gin@v1.10.0</a>&#x2F;context.go:185\ngithub.com&#x2F;oapi-codegen&#x2F;gin-middleware.OapiRequestValidatorWithOptions.func1\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;oapi-codegen&#x2F;<a href="mailto:&#103;&#x69;&#x6e;&#x2d;&#x6d;&#105;&#100;&#x64;&#x6c;&#101;&#119;&#97;&#114;&#x65;&#64;&#x76;&#x31;&#46;&#x30;&#x2e;&#49;">gin-middleware@v1.0.1</a>&#x2F;oapi_validate.go:108\ngithub.com&#x2F;gin-gonic&#x2F;gin.(*Context).Next\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-gonic&#x2F;<a href="mailto:&#x67;&#x69;&#x6e;&#64;&#x76;&#49;&#46;&#49;&#48;&#46;&#48;">gin@v1.10.0</a>&#x2F;context.go:185\ngithub.com&#x2F;gin-contrib&#x2F;size.RequestSizeLimiter.func1\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-contrib&#x2F;<a href="mailto:&#x73;&#105;&#122;&#101;&#x40;&#x76;&#x30;&#x2e;&#x30;&#x2e;&#48;&#x2d;&#50;&#48;&#50;&#x33;&#x30;&#x32;&#49;&#x32;&#x30;&#x31;&#x32;&#54;&#x35;&#x37;&#45;&#x65;&#x31;&#x34;&#x61;&#49;&#x34;&#48;&#x39;&#52;&#x64;&#x63;&#x34;">size@v0.0.0-20230212012657-e14a14094dc4</a>&#x2F;size.go:88\ngithub.com&#x2F;gin-gonic&#x2F;gin.(*Context).Next\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-gonic&#x2F;<a href="mailto:&#103;&#105;&#110;&#64;&#118;&#x31;&#x2e;&#x31;&#48;&#46;&#x30;">gin@v1.10.0</a>&#x2F;context.go:185\ngithub.com&#x2F;gin-gonic&#x2F;gin.CustomRecoveryWithWriter.func1\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-gonic&#x2F;<a href="mailto:&#103;&#105;&#x6e;&#64;&#118;&#49;&#46;&#49;&#x30;&#46;&#x30;">gin@v1.10.0</a>&#x2F;recovery.go:102\ngithub.com&#x2F;gin-gonic&#x2F;gin.(*Context).Next\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-gonic&#x2F;<a href="mailto:&#x67;&#x69;&#x6e;&#x40;&#x76;&#x31;&#46;&#49;&#x30;&#x2e;&#48;">gin@v1.10.0</a>&#x2F;context.go:185\ngithub.com&#x2F;e2b-dev&#x2F;infra&#x2F;packages&#x2F;api&#x2F;internal&#x2F;middleware.IncludeRoutes.func1\n\t&#x2F;kok&#x2F;todo-api&#x2F;main4&#x2F;packages&#x2F;api&#x2F;internal&#x2F;middleware&#x2F;exclude.go:28\ngithub.com&#x2F;gin-gonic&#x2F;gin.(*Context).Next\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-gonic&#x2F;<a href="mailto:&#103;&#105;&#110;&#x40;&#118;&#x31;&#x2e;&#x31;&#x30;&#46;&#x30;">gin@v1.10.0</a>&#x2F;context.go:185\ngithub.com&#x2F;e2b-dev&#x2F;infra&#x2F;packages&#x2F;api&#x2F;internal&#x2F;middleware&#x2F;otel&#x2F;tracing.Middleware.func1\n\t&#x2F;kok&#x2F;todo-api&#x2F;main4&#x2F;packages&#x2F;api&#x2F;internal&#x2F;middleware&#x2F;otel&#x2F;tracing&#x2F;middleware.go:87\ngithub.com&#x2F;e2b-dev&#x2F;infra&#x2F;packages&#x2F;api&#x2F;internal&#x2F;middleware.ExcludeRoutes.func1\n\t&#x2F;kok&#x2F;todo-api&#x2F;main4&#x2F;packages&#x2F;api&#x2F;internal&#x2F;middleware&#x2F;exclude.go:14\ngithub.com&#x2F;gin-gonic&#x2F;gin.(*Context).Next\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-gonic&#x2F;<a href="mailto:&#103;&#x69;&#x6e;&#x40;&#x76;&#x31;&#46;&#x31;&#x30;&#x2e;&#x30;">gin@v1.10.0</a>&#x2F;context.go:185\ngithub.com&#x2F;gin-gonic&#x2F;gin.(*Engine).handleHTTPRequest\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-gonic&#x2F;<a href="mailto:&#x67;&#105;&#x6e;&#64;&#118;&#x31;&#x2e;&#x31;&#x30;&#x2e;&#48;">gin@v1.10.0</a>&#x2F;gin.go:633\ngithub.com&#x2F;gin-gonic&#x2F;gin.(*Engine).ServeHTTP\n\t&#x2F;root&#x2F;go&#x2F;pkg&#x2F;mod&#x2F;github.com&#x2F;gin-gonic&#x2F;<a href="mailto:&#x67;&#x69;&#110;&#64;&#x76;&#49;&#46;&#x31;&#x30;&#46;&#x30;">gin@v1.10.0</a>&#x2F;gin.go:589\nnet&#x2F;http.serverHandler.ServeHTTP\n\t&#x2F;usr&#x2F;local&#x2F;go&#x2F;src&#x2F;net&#x2F;http&#x2F;server.go:3301\nnet&#x2F;http.(*conn).serve\n\t&#x2F;usr&#x2F;local&#x2F;go&#x2F;src&#x2F;net&#x2F;http&#x2F;server.go:2102”}</p>
+        <p>錯誤訊息</p>
+<pre><code>&#123;&quot;level&quot;:&quot;error&quot;,&quot;timestamp&quot;:&quot;2025-06-16T18:10:43.426849691+08:00&quot;,&quot;message&quot;:&quot;build failed&quot;,&quot;service&quot;:&quot;orchestration-api&quot;,&quot;internal&quot;:true,&quot;pid&quot;:1056502,&quot;template.id&quot;:&quot;yf0qzjw458rcn5nv80g5&quot;,&quot;debug_id&quot;:null,&quot;error&quot;:&quot;failed to create template &#39;yf0qzjw458rcn5nv80g5&#39;: [Unimplemented] unknown service TemplateService&quot;,&quot;stacktrace&quot;:&quot;github.com/e2b-dev/infra/packages/shared/pkg/telemetry.ReportCriticalError\n\t/kok/todo-api/main4/packages/shared/pkg/telemetry/tracing.go:80\ngithub.com/e2b-dev/infra/packages/api/internal/handlers.(*APIStore).PostTemplatesTemplateIDBuildsBuildID\n\t/kok/todo-api/main4/packages/api/internal/handlers/template_start_build.go:160\ngithub.com/e2b-dev/infra/packages/api/internal/api.(*ServerInterfaceWrapper).PostTemplatesTemplateIDBuildsBuildID\n\t/kok/todo-api/main4/packages/api/internal/api/api.gen.go:848\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/gin-contrib/zap.GinzapWithConfig.func1\n\t/root/go/pkg/mod/github.com/gin-contrib/zap@v1.1.4/zap.go:68\nmain.NewGinServer.func1\n\t/kok/todo-api/main4/packages/api/main.go:157\ngithub.com/e2b-dev/infra/packages/api/internal/middleware.ExcludeRoutes.func1\n\t/kok/todo-api/main4/packages/api/internal/middleware/exclude.go:14\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/oapi-codegen/gin-middleware.OapiRequestValidatorWithOptions.func1\n\t/root/go/pkg/mod/github.com/oapi-codegen/gin-middleware@v1.0.1/oapi_validate.go:108\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/gin-contrib/size.RequestSizeLimiter.func1\n\t/root/go/pkg/mod/github.com/gin-contrib/size@v0.0.0-20230212012657-e14a14094dc4/size.go:88\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/e2b-dev/infra/packages/api/internal/middleware.IncludeRoutes.func1\n\t/kok/todo-api/main4/packages/api/internal/middleware/exclude.go:28\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/e2b-dev/infra/packages/api/internal/middleware/otel/tracing.Middleware.func1\n\t/kok/todo-api/main4/packages/api/internal/middleware/otel/tracing/middleware.go:87\ngithub.com/e2b-dev/infra/packages/api/internal/middleware.ExcludeRoutes.func1\n\t/kok/todo-api/main4/packages/api/internal/middleware/exclude.go:14\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589\nnet/http.serverHandler.ServeHTTP\n\t/usr/local/go/src/net/http/server.go:3301\nnet/http.(*conn).serve\n\t/usr/local/go/src/net/http/server.go:2102&quot;&#125;
+</code></pre>
 <p>錯在 &#x2F;kok&#x2F;todo-api&#x2F;main4&#x2F;packages&#x2F;api&#x2F;internal&#x2F;api&#x2F;api.gen.go:848</p>
-<p>ORCHESTRATOR_SERVICES ?&#x3D; template-manager只有3個選項<br>    UnknownService  ServiceType &#x3D; “orch-unknown”<br>    Orchestrator    ServiceType &#x3D; “orchestrator”<br>    TemplateManager ServiceType &#x3D; “template-manager”</p>
-<pre><code>package service
-
-import (
-    &quot;strings&quot;
-
-    &quot;github.com/e2b-dev/infra/packages/shared/pkg/env&quot;
-    &quot;github.com/e2b-dev/infra/packages/shared/pkg/utils&quot;
-)
-
-type ServiceType string
-
-const (
+<pre><code>ORCHESTRATOR_SERVICES ?= template-manager只有3個選項
     UnknownService  ServiceType = &quot;orch-unknown&quot;
     Orchestrator    ServiceType = &quot;orchestrator&quot;
     TemplateManager ServiceType = &quot;template-manager&quot;
-)
 
-// ParseServiceType converts a string to a ServiceType.
-// It is case-insensitive and defaults to UnknownService.
-func ParseServiceType(s string) ServiceType &#123;
-    switch strings.ToLower(strings.TrimSpace(s)) &#123;
-    case string(Orchestrator):
-        return Orchestrator
-    case string(TemplateManager):
-        return TemplateManager
-    default:
-        return UnknownService
-    &#125;
-&#125;
 
-// GetServices parses the ORCHESTRATOR_SERVICES environment variable
-// and returns a slice of known ServiceTypes.
-func GetServices() []ServiceType &#123;
-    servicesEnv := env.GetEnv(&quot;ORCHESTRATOR_SERVICES&quot;, string(Orchestrator))
-    rawServiceNames := strings.Split(servicesEnv, &quot;,&quot;)
+    package service
 
-    var services []ServiceType
-    for _, name := range rawServiceNames &#123;
-        service := ParseServiceType(name)
-        if service != UnknownService &#123;
-            services = append(services, service)
+    import (
+        &quot;strings&quot;
+
+        &quot;github.com/e2b-dev/infra/packages/shared/pkg/env&quot;
+        &quot;github.com/e2b-dev/infra/packages/shared/pkg/utils&quot;
+    )
+
+    type ServiceType string
+
+    const (
+        UnknownService  ServiceType = &quot;orch-unknown&quot;
+        Orchestrator    ServiceType = &quot;orchestrator&quot;
+        TemplateManager ServiceType = &quot;template-manager&quot;
+    )
+
+    // ParseServiceType converts a string to a ServiceType.
+    // It is case-insensitive and defaults to UnknownService.
+    func ParseServiceType(s string) ServiceType &#123;
+        switch strings.ToLower(strings.TrimSpace(s)) &#123;
+        case string(Orchestrator):
+            return Orchestrator
+        case string(TemplateManager):
+            return TemplateManager
+        default:
+            return UnknownService
         &#125;
     &#125;
 
-    return services
-&#125;
+    // GetServices parses the ORCHESTRATOR_SERVICES environment variable
+    // and returns a slice of known ServiceTypes.
+    func GetServices() []ServiceType &#123;
+        servicesEnv := env.GetEnv(&quot;ORCHESTRATOR_SERVICES&quot;, string(Orchestrator))
+        rawServiceNames := strings.Split(servicesEnv, &quot;,&quot;)
 
-// GetServiceName returns a single string identifier for the given services.
-// If multiple services are present, they are joined with underscores.
-func GetServiceName(services []ServiceType) string &#123;
-    if len(services) == 0 &#123;
-        return string(UnknownService)
-    &#125;
-
-    var builder strings.Builder
-    for i, s := range services &#123;
-        if i &gt; 0 &#123;
-            builder.WriteString(&quot;_&quot;)
+        var services []ServiceType
+        for _, name := range rawServiceNames &#123;
+            service := ParseServiceType(name)
+            if service != UnknownService &#123;
+                services = append(services, service)
+            &#125;
         &#125;
-        builder.WriteString(string(s))
+
+        return services
     &#125;
 
-    return builder.String()
-&#125;
+    // GetServiceName returns a single string identifier for the given services.
+    // If multiple services are present, they are joined with underscores.
+    func GetServiceName(services []ServiceType) string &#123;
+        if len(services) == 0 &#123;
+            return string(UnknownService)
+        &#125;
 
-func GetClientID() string &#123;
-    return utils.RequiredEnv(&quot;NODE_ID&quot;, &quot;Nomad ID of the instance node&quot;)
-&#125;
+        var builder strings.Builder
+        for i, s := range services &#123;
+            if i &gt; 0 &#123;
+                builder.WriteString(&quot;_&quot;)
+            &#125;
+            builder.WriteString(string(s))
+        &#125;
+
+        return builder.String()
+    &#125;
+
+    func GetClientID() string &#123;
+        return utils.RequiredEnv(&quot;NODE_ID&quot;, &quot;Nomad ID of the instance node&quot;)
+    &#125;
 </code></pre>
 <p>這邊說明了RegistryProvider 有3個參數GCP_ARTIFACTS AWS_ECR Local</p>
-<p>package artifacts_registry</p>
-<p>import (<br>	“context”<br>	“errors”<br>	“fmt”<br>	“time”</p>
-<pre><code>v1 &quot;github.com/google/go-containerregistry/pkg/v1&quot;
+<pre><code>package artifacts_registry
 
-&quot;github.com/e2b-dev/infra/packages/shared/pkg/env&quot;
-</code></pre>
-<p>)</p>
-<p>type RegistryProvider string</p>
-<p>const (<br>	GCPStorageProvider   RegistryProvider &#x3D; “GCP_ARTIFACTS”<br>	AWSStorageProvider   RegistryProvider &#x3D; “AWS_ECR”<br>	LocalStorageProvider RegistryProvider &#x3D; “Local”</p>
-<pre><code>DefaultRegistryProvider RegistryProvider = GCPStorageProvider
+import (
+    &quot;context&quot;
+    &quot;errors&quot;
+    &quot;fmt&quot;
+    &quot;time&quot;
 
-storageProviderEnv = &quot;ARTIFACTS_REGISTRY_PROVIDER&quot;
-</code></pre>
-<p>)</p>
-<p>var (<br>	ErrImageNotExists &#x3D; errors.New(“image does not exist”)<br>)</p>
-<p>type ArtifactsRegistry interface {<br>	GetTag(ctx context.Context, templateId string, buildId string) (string, error)<br>	GetImage(ctx context.Context, templateId string, buildId string, platform v1.Platform) (v1.Image, error)<br>	Delete(ctx context.Context, templateId string, buildId string) error<br>}</p>
-<p>func GetArtifactsRegistryProvider() (ArtifactsRegistry, error) {<br>	var provider &#x3D; RegistryProvider(env.GetEnv(storageProviderEnv, string(DefaultRegistryProvider)))</p>
-<pre><code>setupCtx, setupCtxCancel := context.WithTimeout(context.Background(), 10*time.Second)
-defer setupCtxCancel()
+    v1 &quot;github.com/google/go-containerregistry/pkg/v1&quot;
 
-switch provider &#123;
-case AWSStorageProvider:
-	return NewAWSArtifactsRegistry(setupCtx)
-case GCPStorageProvider:
-	return NewGCPArtifactsRegistry(setupCtx)
-case LocalStorageProvider:
-	return NewLocalArtifactsRegistry()
+    &quot;github.com/e2b-dev/infra/packages/shared/pkg/env&quot;
+)
+
+type RegistryProvider string
+
+const (
+    GCPStorageProvider   RegistryProvider = &quot;GCP_ARTIFACTS&quot;
+    AWSStorageProvider   RegistryProvider = &quot;AWS_ECR&quot;
+    LocalStorageProvider RegistryProvider = &quot;Local&quot;
+
+    DefaultRegistryProvider RegistryProvider = GCPStorageProvider
+
+    storageProviderEnv = &quot;ARTIFACTS_REGISTRY_PROVIDER&quot;
+)
+
+var (
+    ErrImageNotExists = errors.New(&quot;image does not exist&quot;)
+)
+
+type ArtifactsRegistry interface &#123;
+    GetTag(ctx context.Context, templateId string, buildId string) (string, error)
+    GetImage(ctx context.Context, templateId string, buildId string, platform v1.Platform) (v1.Image, error)
+    Delete(ctx context.Context, templateId string, buildId string) error
 &#125;
 
-return nil, fmt.Errorf(&quot;unknown artifacts registry provider: %s&quot;, provider)
+func GetArtifactsRegistryProvider() (ArtifactsRegistry, error) &#123;
+    var provider = RegistryProvider(env.GetEnv(storageProviderEnv, string(DefaultRegistryProvider)))
+
+    setupCtx, setupCtxCancel := context.WithTimeout(context.Background(), 10*time.Second)
+    defer setupCtxCancel()
+
+    switch provider &#123;
+    case AWSStorageProvider:
+        return NewAWSArtifactsRegistry(setupCtx)
+    case GCPStorageProvider:
+        return NewGCPArtifactsRegistry(setupCtx)
+    case LocalStorageProvider:
+        return NewLocalArtifactsRegistry()
+    &#125;
+
+    return nil, fmt.Errorf(&quot;unknown artifacts registry provider: %s&quot;, provider)
+&#125;
 </code></pre>
-<p>}</p>
 
       
     </div>
@@ -538,10 +566,10 @@ return nil, fmt.Errorf(&quot;unknown artifacts registry provider: %s&quot;, prov
     
       <div>
         <span class="icon-brush"></span>
-        14.1k
+        13.9k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:25
+        01:24
       </div>
     
     
@@ -735,9 +763,9 @@ return nil, fmt.Errorf(&quot;unknown artifacts registry provider: %s&quot;, prov
           url: "https://itamiokanjiro.ddns.net:3111/2025/06/16/%E4%BB%94%E7%B4%B0%E5%88%86%E6%9E%90/",
           excerpt: "",
           description: "",
-          stripContent: "{“level”:”error”,”timestamp”:”2025-06-16T18:10:43.426849691+08:00”,”message”:”build failed”,”service”:”orchestration-api”,”internal”:true,”pid”:1056502,”template.id”:”yf0qzjw458rcn5nv80g5”,”debug_id”:null,”error”:”failed to create template ‘yf0qzjw45",
+          stripContent: "錯誤訊息 &amp;#123;&amp;quot;level&amp;quot;:&amp;quot;error&amp;quot;,&amp;quot;timestamp&amp;quot;:&amp;quot;2025-06-16T18:10:43.426849691+08:00&amp;quot;,&amp;quot;message&amp;quot;:&amp;quot;build failed&amp;quot;,&amp;quot;service&amp;quot;:&amp;quot;orchestration-api&amp;quot;,&amp;quot;internal&amp;quot;:true,&amp;quot;pid&amp;qu",
           date: "Mon Jun 16 2025 16:31:41 GMT+0800",
-          updated: "Mon Jun 16 2025 20:26:58 GMT+0800",
+          updated: "Mon Jun 16 2025 21:06:58 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>
