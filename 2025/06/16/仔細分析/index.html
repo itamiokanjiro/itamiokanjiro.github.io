@@ -43,7 +43,7 @@
 <meta property="og:description" content="錯誤訊息 &#123;&quot;level&quot;:&quot;error&quot;,&quot;timestamp&quot;:&quot;2025-06-16T18:10:43.426849691+08:00&quot;,&quot;message&quot;:&quot;build failed&quot;,&quot;service&quot;:&quot;orchestratio">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-06-16T08:31:41.000Z">
-<meta property="article:modified_time" content="2025-06-16T13:06:58.938Z">
+<meta property="article:modified_time" content="2025-06-16T13:09:08.918Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta name="twitter:card" content="summary">
   
@@ -342,13 +342,8 @@
 <pre><code>&#123;&quot;level&quot;:&quot;error&quot;,&quot;timestamp&quot;:&quot;2025-06-16T18:10:43.426849691+08:00&quot;,&quot;message&quot;:&quot;build failed&quot;,&quot;service&quot;:&quot;orchestration-api&quot;,&quot;internal&quot;:true,&quot;pid&quot;:1056502,&quot;template.id&quot;:&quot;yf0qzjw458rcn5nv80g5&quot;,&quot;debug_id&quot;:null,&quot;error&quot;:&quot;failed to create template &#39;yf0qzjw458rcn5nv80g5&#39;: [Unimplemented] unknown service TemplateService&quot;,&quot;stacktrace&quot;:&quot;github.com/e2b-dev/infra/packages/shared/pkg/telemetry.ReportCriticalError\n\t/kok/todo-api/main4/packages/shared/pkg/telemetry/tracing.go:80\ngithub.com/e2b-dev/infra/packages/api/internal/handlers.(*APIStore).PostTemplatesTemplateIDBuildsBuildID\n\t/kok/todo-api/main4/packages/api/internal/handlers/template_start_build.go:160\ngithub.com/e2b-dev/infra/packages/api/internal/api.(*ServerInterfaceWrapper).PostTemplatesTemplateIDBuildsBuildID\n\t/kok/todo-api/main4/packages/api/internal/api/api.gen.go:848\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/gin-contrib/zap.GinzapWithConfig.func1\n\t/root/go/pkg/mod/github.com/gin-contrib/zap@v1.1.4/zap.go:68\nmain.NewGinServer.func1\n\t/kok/todo-api/main4/packages/api/main.go:157\ngithub.com/e2b-dev/infra/packages/api/internal/middleware.ExcludeRoutes.func1\n\t/kok/todo-api/main4/packages/api/internal/middleware/exclude.go:14\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/oapi-codegen/gin-middleware.OapiRequestValidatorWithOptions.func1\n\t/root/go/pkg/mod/github.com/oapi-codegen/gin-middleware@v1.0.1/oapi_validate.go:108\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/gin-contrib/size.RequestSizeLimiter.func1\n\t/root/go/pkg/mod/github.com/gin-contrib/size@v0.0.0-20230212012657-e14a14094dc4/size.go:88\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/e2b-dev/infra/packages/api/internal/middleware.IncludeRoutes.func1\n\t/kok/todo-api/main4/packages/api/internal/middleware/exclude.go:28\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/e2b-dev/infra/packages/api/internal/middleware/otel/tracing.Middleware.func1\n\t/kok/todo-api/main4/packages/api/internal/middleware/otel/tracing/middleware.go:87\ngithub.com/e2b-dev/infra/packages/api/internal/middleware.ExcludeRoutes.func1\n\t/kok/todo-api/main4/packages/api/internal/middleware/exclude.go:14\ngithub.com/gin-gonic/gin.(*Context).Next\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP\n\t/root/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589\nnet/http.serverHandler.ServeHTTP\n\t/usr/local/go/src/net/http/server.go:3301\nnet/http.(*conn).serve\n\t/usr/local/go/src/net/http/server.go:2102&quot;&#125;
 </code></pre>
 <p>錯在 &#x2F;kok&#x2F;todo-api&#x2F;main4&#x2F;packages&#x2F;api&#x2F;internal&#x2F;api&#x2F;api.gen.go:848</p>
-<pre><code>ORCHESTRATOR_SERVICES ?= template-manager只有3個選項
-    UnknownService  ServiceType = &quot;orch-unknown&quot;
-    Orchestrator    ServiceType = &quot;orchestrator&quot;
-    TemplateManager ServiceType = &quot;template-manager&quot;
-
-
-    package service
+<p>ORCHESTRATOR_SERVICES ?&#x3D; template-manager只有3個選項<br>UnknownService  ServiceType &#x3D; “orch-unknown”<br>Orchestrator    ServiceType &#x3D; “orchestrator”<br>TemplateManager ServiceType &#x3D; “template-manager”</p>
+<pre><code>    package service
 
     import (
         &quot;strings&quot;
@@ -765,7 +760,7 @@ func GetArtifactsRegistryProvider() (ArtifactsRegistry, error) &#123;
           description: "",
           stripContent: "錯誤訊息 &amp;#123;&amp;quot;level&amp;quot;:&amp;quot;error&amp;quot;,&amp;quot;timestamp&amp;quot;:&amp;quot;2025-06-16T18:10:43.426849691+08:00&amp;quot;,&amp;quot;message&amp;quot;:&amp;quot;build failed&amp;quot;,&amp;quot;service&amp;quot;:&amp;quot;orchestration-api&amp;quot;,&amp;quot;internal&amp;quot;:true,&amp;quot;pid&amp;qu",
           date: "Mon Jun 16 2025 16:31:41 GMT+0800",
-          updated: "Mon Jun 16 2025 21:06:58 GMT+0800",
+          updated: "Mon Jun 16 2025 21:09:08 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>
