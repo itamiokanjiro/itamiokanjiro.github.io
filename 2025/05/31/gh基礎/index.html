@@ -43,7 +43,7 @@
 <meta property="og:description" content="改成main gh api \ -X PATCH \ -H &quot;Accept: application&#x2F;vnd.github+json&quot; \ &#x2F;repos&#x2F;itamiokanjiro&#x2F;itamiokanjiro.github.io \ -f default_branch&#x3D;main  22 curl -X PATCH \ -H &quot;Authorization: token">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-05-31T11:56:19.000Z">
-<meta property="article:modified_time" content="2025-06-24T00:01:36.917Z">
+<meta property="article:modified_time" content="2025-06-24T21:04:33.841Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta name="twitter:card" content="summary">
   
@@ -325,7 +325,7 @@
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-05-31T11:56:19.000Z" itemprop="datePublished">2025-05-31</time>
-    <time style="display: none;" id="post-update-time">2025-06-24</time>
+    <time style="display: none;" id="post-update-time">2025-06-25</time>
   </span>
 </div>
 
@@ -353,12 +353,12 @@ https://api.github.com/repos/itamiokanjiro/itamiokanjiro.github.io \
 -d &#39;&#123;&quot;default_branch&quot;:&quot;main&quot;&#125;&#39;
 </code></pre>
 <p>gh登入 創建itamiokanjiro.github.io</p>
-<p>   gh auth login<br>   gh repo create test.github.io –public –confirm</p>
+<p>   gh auth login<br>   gh repo create react-a –public –confirm</p>
 <p>gh登出</p>
 <pre><code>gh auth logout
 </code></pre>
 <p>強制設定看main</p>
-<pre><code>gh api -X POST /repos/itamiokanjiro/test.github.io/pages \
+<pre><code>gh api -X POST /repos/itamiokanjiro/react-a/pages \
 -f source.branch=&#39;main&#39; \
 -f source.path=&#39;/&#39;
 </code></pre>
@@ -460,10 +460,10 @@ https://api.github.com/repos/itamiokanjiro/itamiokanjiro.github.io \
     
       <div>
         <span class="icon-brush"></span>
-        18.7k
+        19k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:51
+        01:54
       </div>
     
     
@@ -659,7 +659,7 @@ https://api.github.com/repos/itamiokanjiro/itamiokanjiro.github.io \
           description: "",
           stripContent: "改成main gh api \ -X PATCH \ -H &amp;quot;Accept: application/vnd.github+json&amp;quot; \ /repos/itamiokanjiro/itamiokanjiro.github.io \ -f default_branch=main  22 curl -X PATCH \ -H &amp;quot;Authorization: token 我的token&amp;quot; \ -H &amp;quot;Accept: application/vnd.g",
           date: "Sat May 31 2025 19:56:19 GMT+0800",
-          updated: "Tue Jun 24 2025 08:01:36 GMT+0800",
+          updated: "Wed Jun 25 2025 05:04:33 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>

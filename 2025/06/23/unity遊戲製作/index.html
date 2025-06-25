@@ -43,7 +43,7 @@
 <meta property="og:description" content="Hierarchy(顯示scenes的地方) Inspector(顯示組件的地方) 創建下拉條 選擇一個scenes中的Canvas 創建主畫面 Canvas (預設) └── Image (主介面預設) 從此處創建Scroll View     └── Scroll View           └── Viewport             └── Content(此處需手動創建Conten">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-06-23T01:20:17.000Z">
-<meta property="article:modified_time" content="2025-06-23T23:39:48.122Z">
+<meta property="article:modified_time" content="2025-06-24T18:17:44.375Z">
 <meta property="article:author" content="一袋米要扛幾樓">
 <meta name="twitter:card" content="summary">
   
@@ -325,7 +325,7 @@
       <div class="article-date">
   <span class="article-date-link" data-aos="zoom-in">
     <time datetime="2025-06-23T01:20:17.000Z" itemprop="datePublished">2025-06-23</time>
-    <time style="display: none;" id="post-update-time">2025-06-24</time>
+    <time style="display: none;" id="post-update-time">2025-06-25</time>
   </span>
 </div>
 
@@ -351,28 +351,22 @@ Canvas (預設)
 Content Size Fitter設置 vertical Fit為 Preferred Size
 </code></pre>
 <p>數據庫管理</p>
-<pre><code>-- 玩家卡組主表：卡組列表
-    CREATE TABLE card_party_list (
-        card_party_id VARCHAR(50) PRIMARY KEY,               -- 卡組唯一 ID（建議 UUID 或類似格式）
-        account_id VARCHAR(50) NOT NULL,                     -- 綁定到 account 表的 id
-        deck_name VARCHAR(50),                               -- 卡組名稱
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,       -- 創建時間
-        updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        CONSTRAINT fk_party_account FOREIGN KEY (account_id) REFERENCES account(id)
-    );
-
-
--- 卡組內容表：每個卡組中的卡片資料
-CREATE TABLE cards_party_content (
-    party_card_id VARCHAR(50) PRIMARY KEY,               -- 每個卡組卡片項目唯一 ID（建議 UUID）
-    party_id VARCHAR(50) NOT NULL,                       -- 綁定到 card_party_list 的卡組 ID
-    card_uid int NOT NULL,                       -- 綁定到玩家持有的卡（player_cards.card_uid）
-    position TINYINT NOT NULL,                           -- 卡片位置（1~5）
-
-    CONSTRAINT fk_party_card_party FOREIGN KEY (party_id) REFERENCES card_party_list(card_party_id),
-    CONSTRAINT fk_party_card_card FOREIGN KEY (card_uid) REFERENCES player_cards(card_uid),
-    UNIQUE KEY uniq_party_position (party_id, position)  -- 同一卡組中位置不可重複
-);
+<pre><code>SHOW CREATE TABLE account; 導出表模樣
+</code></pre>
+<p>C# 高光</p>
+<pre><code>void HighlightSelectedSlot()
+&#123;
+    for (int i = 0; i &lt; deckSlotsContainer.childCount; i++) //排列 循環排列至子項目 最多的數量
+    &#123;
+        var outline = deckSlotsContainer.GetChild(i).GetComponent&lt;Outline&gt;(); //從deckSlotsContainer取子項目 
+        if (outline != null)  //如果選擇的卡牌欄位不為null
+        &#123;
+            outline.enabled = (i == selectedSlotIndex);   // 啟用outline
+            outline.effectColor = Color.red;   //邊框改紅色
+            outline.effectDistance = new Vector2(3, 3); // 邊框粗細
+        &#125;
+    &#125;
+&#125;
 </code></pre>
 
       
@@ -452,10 +446,10 @@ CREATE TABLE cards_party_content (
     
       <div>
         <span class="icon-brush"></span>
-        18.7k
+        19k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        01:51
+        01:54
       </div>
     
     
@@ -651,7 +645,7 @@ CREATE TABLE cards_party_content (
           description: "",
           stripContent: "Hierarchy(顯示scenes的地方) Inspector(顯示組件的地方) 創建下拉條 選擇一個scenes中的Canvas 創建主畫面 Canvas (預設) └── Image (主介面預設) 從此處創建Scroll View     └── Scroll View           └── Viewport             └── Content(此處需手動創建Content Size Fitter和Vertical Layout Group)  Content Size",
           date: "Mon Jun 23 2025 09:20:17 GMT+0800",
-          updated: "Tue Jun 24 2025 07:39:48 GMT+0800",
+          updated: "Wed Jun 25 2025 02:17:44 GMT+0800",
           cover: "/images/600211.webp",
         };
       </script>
